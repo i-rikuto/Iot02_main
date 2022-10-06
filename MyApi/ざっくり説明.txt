@@ -1,0 +1,10 @@
+ターミナルに入力　node -v
+初期化 npm init -y 
+package.jsonが作成される
+package.jsonの7行目"test": "echo \"Error: no test specified\" && exit 1"を
+                    "dev": "node index.js"に書き換え(使いやすいように)
+index.jsを作成。
+ターミナル:npm run dev でサーバーが起動(package.jsonのパスに移動してから入力!!!)
+ターミナル:npm i express でExpressをインストールする(nodejsのフレームワーク)
+後はindex.jsに書き込む。
+Iot02のパスワードはpassword

@@ -1,0 +1,35 @@
+.floor{
+    background-color: aqua;
+    display: flex;
+}
+.F{
+    /* display: flex; */
+    list-style: none;
+}
+.akijyoufou.F{
+    display: flex;
+}
+
+header{  
+    display: flex;
+    float: left;
+    margin-left: auto;
+    
+}
+
+.LockImage{
+    margin-left: 130px;
+    margin-top: 100px;
+}
+
+.LockImage>p{
+    font-size: 20px;
+    clear: both;
+    background-color: black;
+    color: white;
+    font-family: "メイリオ";
+}
+
+body{
+    background-color: rgb(255, 198, 106);
+}
