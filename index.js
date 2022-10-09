@@ -122,7 +122,7 @@ app.post("/api/post/:data/:number",(req,res)=>{
     }
     //k = 1
     avg /= 10;
-    console.log(req.params.number + "の移動平均は" + avg);
+    //console.log(req.params.number + "の移動平均は" + avg);
     if(avg > 1000){
         lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "yes";
     }else{
