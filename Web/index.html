@@ -57,7 +57,7 @@ function Reroad_Api(){
         //Data_Json = Data_Json['lock'];
         console.log(Data_Json.lock);
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
-        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes'){
+        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no'){
             document.getElementById('main_' + String(i)).src = Lock_image;
         }else{
             document.getElementById('main_' + String(i)).src = NO_Lock_image;
