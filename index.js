@@ -69,17 +69,8 @@ for(let i = 0;i < 15;i++){
         {id:7,data:0.00},
         {id:8,data:0.00},
         {id:9,data:0.00},
-        {id:10,data:0.00},
-        {id:11,data:0.00},
-        {id:12,data:0.00},
-        {id:13,data:0.00},
-        {id:14,data:0.00},
-        {id:15,data:0.00},
-        {id:16,data:0.00},
-        {id:17,data:0.00},
-        {id:18,data:0.00},
-        {id:19,data:0.00},
-        {id:20,data:0.00}];
+        {id:10,data:0.00}
+        ];
 }
 //console.log(Datas)
 //console.log(lock_data)
@@ -117,12 +108,12 @@ app.post("/api/post/:data/:number",(req,res)=>{
 
     Datas[req.params.number - 1].push(post);
     
-    for(let k = 1;k <= 10;k++){
+    for(let k = 1;k <= 5;k++){
         avg += parseFloat(Datas[req.params.number - 1].find((c) => c.id === parseInt(Datas[req.params.number - 1].length - k)).data);
     }
     //k = 1
-    avg /= 10;
-    //console.log(req.params.number + "の移動平均は" + avg);
+    avg /= 5;
+    console.log(req.params.number + "の移動平均は" + avg);
     if(avg > 1000){
         lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "yes";
     }else{
@@ -151,4 +142,4 @@ app.delete("/api/put/:id",(req,res) =>{
     res.send(id);
 });
 
-setInterval(() => console.log(Datas),10000);
+//setInterval(() => console.log(Datas),10000);
