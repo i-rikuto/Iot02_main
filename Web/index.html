@@ -2,10 +2,11 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="大阪電気通信大学高等学校のIot情報通信コース2班のWebサイトです。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Iot実習2班</title>
 </head>
 <body>
     <header>
@@ -22,25 +23,10 @@
             <img id="main_3" src="image/error_Lock.png" width="240px" height="240px" alt="鍵の画像">
         </dev>
     </header>
-    <!-- <p id="test_1">テスト</p>
-    <p id="test_2">テスト</p>
-    <p id="test_3">テスト</p>
-    <p id="test_4">テスト</p>
-    <p id="test_5">テスト</p>
-    <p id="test_6">テスト</p>
-    <p id="test_7">テスト</p>
-    <p id="test_8">テスト</p>
-    <p id="test_9">テスト</p>
-    <p id="test_10">テスト</p>
-    <p id="test_11">テスト</p>
-    <p id="test_12">テスト</p>
-    <p id="test_13">テスト</p>
-    <p id="test_14">テスト</p>
-    <p id="test_15">テスト</p> -->
-    
+        
     <script>
     let ip = 0;
-    let url = 'http://www.izumain.net/api/locks_data';
+    let url = 'https://www.izumain.net/api/locks_data';
     //let url = 'http://localhost:8888/api/locks_data';
     let check = false;
     let main_ip;
@@ -68,18 +54,8 @@ function Reroad_Api(){
     }
 }
 
-function ipchange(){
-    if(check){
-        url = url = 'http://172.29.35.'+ String(main_ip) + ':8888/api/locks_data';
-    }else{
-        ip += 1;
-        url = 'http://172.29.35.'+ String(ip) + ':8888/api/locks_data';
-        console.log(ip);
-    }
     
-}
-    
-    setInterval("Reroad_Api()", 500);
+setInterval("Reroad_Api()", 500);
 </script>
 </body>
 
