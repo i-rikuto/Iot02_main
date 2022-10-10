@@ -15,7 +15,7 @@ app.listen(process.env.PORT || 8888,console.log("サーバーが開始!!!"));
 app.get("/",(req,res) =>{
     //app.use(express.static('Web'))
     console.log("アクセス!!!");
-    res.sendFile(__dirname + "/Web/index.html");
+    res.sendFile(__dirname + "/Web/main.html");
 });
 
 //取得するデータ(json)

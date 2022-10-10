@@ -1,0 +1,13 @@
+nav>ul>li{
+    background-color: greenyellow;
+}
+
+ul>li{
+    display: inline;
+    font-size: 100px;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+}
