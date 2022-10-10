@@ -5,58 +5,23 @@
     <meta name="description" content="大阪電気通信大学高等学校のIot情報通信コース2班のWebサイトです。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Iot実習2班</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    
     <meta name="google-site-verification" content="hEsL6HMIXpzQpqEsjqUnxk_Vhtg4F_tzwEYqjo9iPIQ" />
+    <title>大阪電気通信高等学校Iot実習2班トップページ</title>
 </head>
 <body>
-    <header>
-        <dev class="LockImage">
-            <p>三階奥</p>
-            <img id="main_1" src="image/error_Lock.png" width="240px" height="240px" alt="鍵の画像">
-        </dev>
-        <dev class="LockImage">
-            <p>三階中央</p>
-            <img id="main_2" src="image/error_Lock.png" width="240px" height="240px" alt="鍵の画像">
-        </dev>
-        <dev class="LockImage">
-            <p>三階手前</p>
-            <img id="main_3" src="image/error_Lock.png" width="240px" height="240px" alt="鍵の画像">
-        </dev>
-    </header>
-        
-    <script>
-    let ip = 0;
-    let url = 'https://www.izumain.net/api/locks_data';
-    let check = false;
-    let main_ip;
-    const Lock_image = ["/image/Lock.png"];
-    const NO_Lock_image = ["/image/no_Lock.png"]
-
-function Reroad_Api(){
-    for(let i = 1;i <= 3;i++){
-        fetch(url)
-        .then(response => response.json())
-        .then(data => {
-        console.log(data);
-        let Data_Json = data;
-        //Data_Json = Data_Json['lock'];
-        console.log(Data_Json.lock);
-        document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
-        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no'){
-            document.getElementById('main_' + String(i)).src = Lock_image;
-        }else{
-            document.getElementById('main_' + String(i)).src = NO_Lock_image;
-        }
-        check = true;
-        
-    }).catch(() => console.log("エラーが発生しました"))
-    }
-}
-
-    
-setInterval("Reroad_Api()", 500);
-</script>
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">1階</a></li>
+            <li><a href="index.html">2階</a></li>
+            <li><a href="3floor.html">3階</a></li>
+            <li><a href="index.html">4階</a></li>
+            <li><a href="index.html">5階</a></li>
+        </ul>
+    </nav>
 </body>
+
 
 </html>
