@@ -7,6 +7,8 @@ const  app = express();
 app.use(express.json());
 
 app.use(express.static('Web'));
+app.use(express.static('Web/public'));
+
 
 //app.listen(8888,console.log("サーバーが開始!!!"));
 app.listen(process.env.PORT || 8888,console.log("サーバーが開始!!!"));
@@ -15,7 +17,7 @@ app.listen(process.env.PORT || 8888,console.log("サーバーが開始!!!"));
 app.get("/",(req,res) =>{
     //app.use(express.static('Web'))
     console.log("アクセス!!!");
-    res.render("/Web/main.html");
+    //res.sendFile(__dirname + "/Web/sub3/3floor.html");
     //res.render("/main.html");
 });
 

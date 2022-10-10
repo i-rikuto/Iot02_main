@@ -1,0 +1,51 @@
+body{
+    background-color: lightcyan;
+}
+
+nav>ul>li{
+    background-color: greenyellow;
+    transition: background-color .5s;
+    transition: width .5s;
+    /* transition: height 1s; */
+}
+
+ul>li{
+    width: 250px;
+    font-size: 80px;
+    list-style: none;
+    border: thick double #32a1ce;
+    font-family: serif;
+    text-align: center;
+    transition: border .5s;
+}
+
+ul>li:hover{
+    background-color: gold ;
+    width: 260px;
+    border: thick double #ff3f25;
+    /* height: 130px; */
+}
+
+a{
+    text-decoration: none;   
+    color: black;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1{
+    font-size: 60px;
+    font-family: system-ui;
+    margin-left: 30px;
+}
+
+p{
+    margin-left: 30px;
+}
+
+.non,.non>a:hover{
+    cursor: not-allowed;
+}
