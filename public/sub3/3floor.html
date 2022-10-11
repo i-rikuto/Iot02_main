@@ -26,12 +26,16 @@
     <p><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
     <script>
         console.log(location.href);
+        window.onload =() =>{
         let _url = location.href
         if(_url == 'https://www.izumain.net/sub3/3floor.html'){
+            console.log("OK");
             let url = 'https://www.izumain.net/api/locks_data';
         }else{
+            console.log("None")
             let url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
         }
+    }
     let ip = 0;
     
     let check = false;
