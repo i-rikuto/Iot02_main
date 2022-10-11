@@ -23,7 +23,7 @@
             <img id="main_3" src="/image/error_Lock.png" width="240px" height="240px" alt="鍵の画像">
         </dev>
     </header>
-    <input type="button" onclick="MC2()" value="MC2Wi-Fi Mode">
+    <p><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/floor.html">つながらないときは</a></p>
     <script>
     let ip = 0;
     let url = 'https://www.izumain.net/api/locks_data';
@@ -54,9 +54,7 @@ function Reroad_Api(){
     
 }
 
-function MC2(){
-    url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
-}
+
 
 setInterval("Reroad_Api()", 500);
 </script>
