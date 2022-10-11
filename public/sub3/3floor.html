@@ -23,10 +23,15 @@
             <img id="main_3" src="/image/error_Lock.png" width="240px" height="240px" alt="鍵の画像">
         </dev>
     </header>
-    <p><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/floor.html">つながらないときは</a></p>
+    <p><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
     <script>
+        if(document.url === 'https://www.izumain.net/sub3/3floor.html'){
+            let url = 'https://www.izumain.net/api/locks_data';
+        }else{
+            let url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
+        }
     let ip = 0;
-    let url = 'https://www.izumain.net/api/locks_data';
+    
     let check = false;
     let main_ip;
     const Lock_image = ["/image/Lock.png"];
