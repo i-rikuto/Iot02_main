@@ -36,7 +36,7 @@ ul{
     justify-content: space-evenly;
 }
 
-h1{
+h1,h2{
     font-size: 60px;
     font-family: system-ui;
     margin-left: 30px;

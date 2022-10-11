@@ -6,8 +6,10 @@ const  app = express();
 //Jsonを使うことを指定する(必須)
 app.use(express.json());
 
-app.use(express.static('Web'));
-app.use(express.static('Web/public'));
+//app.use(express.static('Web'));
+//app.use(express.static('sub3'))
+app.use(express.static('public'));
+app.use(express.static('public/sub3'));
 
 
 //app.listen(8888,console.log("サーバーが開始!!!"));
