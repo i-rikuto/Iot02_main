@@ -49,3 +49,8 @@ p{
 .non,.non>a:hover{
     cursor: not-allowed;
 }
+
+header{
+    background-color: aquamarine;
+    margin-top: -40px;
+}
