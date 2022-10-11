@@ -4,24 +4,21 @@ body{
 
 nav>ul>li{
     background-color: greenyellow;
-    transition: background-color .5s;
-    transition: width .5s;
-    /* transition: height 1s; */
-}
-
-ul>li{
     width: 250px;
     font-size: 80px;
     list-style: none;
-    border: thick double #32a1ce;
+    border: thick double #4a9a04;
     font-family: serif;
     text-align: center;
-    transition: border .5s;
+    transition: background-color 1.0s,width .5s,border 1.5s;
+    /* transition: width .5s; */
+    /* transition: height 1s; */
 }
+
 
 ul>li:hover{
     background-color: gold ;
-    width: 260px;
+    width: 280px;
     border: thick double #ff3f25;
     /* height: 130px; */
 }
@@ -40,10 +37,16 @@ h1,h2{
     font-size: 60px;
     font-family: system-ui;
     margin-left: 30px;
+    /* margin-top: 10px; */
+}
+
+h1{
+    padding-top: 20px;
 }
 
 p{
     margin-left: 30px;
+    margin-top: 10px;
 }
 
 .non,.non>a:hover{
@@ -52,5 +55,5 @@ p{
 
 header{
     background-color: aquamarine;
-    margin-top: -40px;
+    height: 130px;
 }

@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Iot実習2班</title>
 </head>
 <body>
-    <nav><p><a href="../index.html">メインページへ</a></p></nav>
+    <nav>
+        <p><a href="../index.html" id="Mainpage">トップページへ</a></p>
+        <p><a href="../index.html" id="MC2page"></a></p>
+    </nav>
     <header>
         <dev class="LockImage">
             <p>三階奥</p>
@@ -24,6 +28,7 @@
         </dev>
     </header>
     <p><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
+    <div><p id="now_where"></p></div>
     <script>
         console.log(location.href);
         let url = "";
@@ -32,17 +37,22 @@
         if(_url == 'https://www.izumain.net/sub3/3floor.html'){
             console.log("OK");
             url = 'https://www.izumain.net/api/locks_data';
-        }else{
+            document.getElementById("now_where").textContent = "現在正式なサイトです。";
+        }else if(_url == 'https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html'){
             console.log("None")
             url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
+            document.getElementById("now_where").textContent = "現在対MC2Wi-Fiのサイトです。";
+            document.getElementById("MC2page").textContent = "対MC2Wi-Fiのトップページへ。";
+            document.getElementById("Mainpage").textContent = "正式なトップページへ。";
+            document.getElementById("Mainpage").src = "https://www.izumain.net";
+        }else{
+            document.getElementById("now_where").textContent = "現在未知のサイトです。";
         }
     }
-    let ip = 0;
     
-    let check = false;
-    let main_ip;
     const Lock_image = ["/image/Lock.png"];
-    const NO_Lock_image = ["/image/no_Lock.png"]
+    const NO_Lock_image = ["/image/no_Lock.png"];
+    const Error_image = ["/image/error_Lock.png"];
 
 function Reroad_Api(){
     
@@ -60,12 +70,17 @@ function Reroad_Api(){
         }else{
             document.getElementById('main_' + String(i)).src = NO_Lock_image;
         }
-        check = true;
     }
-    }).catch(/*() => url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data"*/)
+    }).catch(Error())
     
 }
 
+function Error(){
+    console.log("Error");
+    for(let k = 1;k <= 3;k++){
+            document.getElementById('main_' + String(i)).src = Error_image;
+        }
+}
 
 
 setInterval("Reroad_Api()", 500);
