@@ -16,7 +16,7 @@ app.use(express.static('public/sub3'));
 app.listen(process.env.PORT || 8888,console.log("サーバーが開始!!!"));
 
 //クライアントに送る処理(テンプレ)
-app.get("/sub3/3floor",(req,res) =>{
+app.get("/sub3/3floor/",(req,res) =>{
     //app.use(express.static('Web'))
     console.log("アクセス!!!");
     res.sendFile(__dirname + "/Web/sub3/3floor.html");
