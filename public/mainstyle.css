@@ -4,8 +4,8 @@ body{
 
 nav>ul>li{
     background-color: greenyellow;
-    width: 250px;
-    font-size: 80px;
+    width: 300px;
+    font-size: 50px;
     list-style: none;
     border: thick double #4a9a04;
     font-family: serif;
@@ -54,6 +54,6 @@ p{
 }
 
 header{
-    background-color: aquamarine;
+    background-color: rgb(127, 255, 155);
     height: 130px;
 }
