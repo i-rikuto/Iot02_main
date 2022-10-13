@@ -10,7 +10,7 @@ nav>ul>li{
     border: thick double #4a9a04;
     font-family: serif;
     text-align: center;
-    transition: background-color 1.0s,width .5s,border 1.5s;
+    transition: background-color 1.0s,width .5s;
     /* transition: width .5s; */
     /* transition: height 1s; */
 }
@@ -18,7 +18,7 @@ nav>ul>li{
 
 ul>li:hover{
     background-color: gold ;
-    width: 280px;
+    /* width: 280px; */
     border: thick double #ff3f25;
     /* height: 130px; */
 }
