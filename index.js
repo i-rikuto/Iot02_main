@@ -10,6 +10,7 @@ app.use(express.json());
 //app.use(express.static('sub3'))
 app.use(express.static('public'));
 app.use(express.static('public/sub3'));
+app.use(express.static('public/contact'));
 
 
 //app.listen(8888,console.log("サーバーが開始!!!"));
@@ -21,6 +22,11 @@ app.get("/sub3/3floor/",(req,res) =>{
     console.log("アクセス!!!");
     res.sendFile(__dirname + "/Web/sub3/3floor.html");
     //res.render("/main.html");
+});
+
+app.get("/contact/",(req,res) =>{
+    console.log("アクセス!!!");
+    res.sendFile(__dirname + "/contact/contact.html");
 });
 
 //取得するデータ(json)
