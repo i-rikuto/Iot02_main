@@ -17,17 +17,17 @@ app.use(express.static('public/contact'));
 app.listen(process.env.PORT || 8888,console.log("サーバーが開始!!!"));
 
 //クライアントに送る処理(テンプレ)
-app.get("/sub3/3floor/",(req,res) =>{
-    //app.use(express.static('Web'))
-    console.log("アクセス!!!");
-    res.sendFile(__dirname + "/Web/sub3/3floor.html");
-    //res.render("/main.html");
-});
+// app.get("/sub3/3floor/",(req,res) =>{
+//     //app.use(express.static('Web'))
+//     console.log("アクセス!!!");
+//     res.sendFile(__dirname + "/Web/sub3/3floor.html");
+//     //res.render("/main.html");
+// });
 
-app.get("/contact/",(req,res) =>{
-    console.log("アクセス!!!");
-    res.sendFile(__dirname + "/contact/contact.html");
-});
+// app.get("/contact/",(req,res) =>{
+//     console.log("アクセス!!!");
+//     res.sendFile(__dirname + "/contact/contact.html");
+// });
 
 //取得するデータ(json)
 const lock_data = [
