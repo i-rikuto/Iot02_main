@@ -78,12 +78,17 @@ h2{
     background-color: rgb(237, 237, 237);
     padding-top: 10px;
     text-align: center;
+    border-bottom: 2px solid gray;
     /* margin-top: 10px; */
 }
 
 h1{
     padding-top: 20px;
+    padding-left: 5px;
+    white-space: nowrap;
 }
+
+
 
 p{
     margin-left: 30px;
@@ -98,17 +103,15 @@ header{
     /* background-color: rgb(127, 255, 155); */
     height: 60px;
     display: flex;
-    width: 100%;
+    width: auto;
     background-color: rgb(237, 237, 237);
     padding-left: 30px;
-    
+    border-bottom: 2px solid gray;
 }
 
 nav{
-    
-    /* width: auto;
-    margin-left: 0px; */
-    
+     /* width: 1120px;
+     margin-left: 30px; */
 }
 
 header>img{
