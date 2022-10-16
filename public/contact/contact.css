@@ -60,7 +60,7 @@ a{
 
 ul{
     /* width: 100%; */
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     justify-content: space-evenly;
     margin-left: 150px;
@@ -88,10 +88,12 @@ p{
 
 header{
     /* background-color: rgb(127, 255, 155); */
-    height: 130px;
+    height: 60px;
     display: flex;
     width: 100%;
-    margin-left: 30px;
+    background-color: rgb(237, 237, 237);
+    padding-left: 30px;
+    
 }
 
 header>img{
