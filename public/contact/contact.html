@@ -26,26 +26,14 @@
         </ul>
     </nav>
     </header>
+    <h1>現在利用出来ません。</h1>
     <main>
-        <form method="post" action="example.cgi">
-
-            <p>デフォルト<br>
-            <input type="text" name="example1"></p>
+        <form method="post" action="mail.php">
+            <p>お名前：<br>
+            <input type="text" name="name" size="30"></p>
             
-            <p>幅を指定<br>
-            <input type="text" name="example2" size="30"></p>
-            
-            <p>最大文字数を指定<br>
-            <input type="text" name="example3" size="30" maxlength="10"></p>
-            
-            <p>初期値を指定<br>
-            <input type="text" name="example4" size="30" value="こんにちは"></p>
-            
-            <p>部品を無効化する<br>
-            <input type="text" name="example5" size="30" value="こんにちは" disabled></p>
-            
-            <p>書き換えを禁止する<br>
-            <input type="text" name="example6" size="30" value="こんにちは" readonly></p>
+            <p>メッセージ：<br>
+            <textarea name="message" cols="30" rows="5"></textarea></p>
             
             <p><input type="submit" value="送信する"></p>
             
@@ -55,6 +43,8 @@
 
     </footer>
 </body>
+<script>
 
+</script>
 
 </html>
