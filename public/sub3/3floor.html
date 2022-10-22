@@ -77,7 +77,7 @@ function Reroad_Api(){
     console.log(data);
     let Data_Json = data;
     //Data_Json = Data_Json['lock'];
-    console.log(Data_Json.lock);
+    //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no'){
