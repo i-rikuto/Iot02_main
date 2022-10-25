@@ -70,6 +70,7 @@
     //const NO_Lock_image = ["/image/IMG_20221025_113948.jpg"];
     const Error_image = ["/image/error_Lock.png"];
     let Count_Yes = 0;
+    let Before = 3;
 function Reroad_Api(){
     
     fetch(url)
@@ -81,12 +82,20 @@ function Reroad_Api(){
     //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
-        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no'){
+        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before !== 0){
+            Before = 0;
+            Count_Yes = 0;
             document.getElementById('main_' + String(i)).src = Lock_image;
-            setInterval(() => {Count_Yes += 0.1
-                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},100);
+            setInterval(() => {Count_Yes += 0.001
+                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},10);
         }else{
-            document.getElementById('main_' + String(i)).src = NO_Lock_image;
+            if(Before !== 1){
+                Before = 1;
+                Count_Yes = 0;
+                document.getElementById('main_' + String(i)).src = NO_Lock_image;
+                setInterval(() => {Count_Yes += 0.001
+                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},10);
+            }
         }
     }
     })//.catch(Error())
