@@ -88,14 +88,13 @@ function Reroad_Api(){
             document.getElementById('main_' + String(i)).src = Lock_image;
             setInterval(() => {Count_Yes += 0.001
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes},10);
-        }else{
-            if(Before !== 1){
-                Before = 1;
-                Count_Yes = 0;
-                document.getElementById('main_' + String(i)).src = NO_Lock_image;
-                setInterval(() => {Count_Yes += 0.001
-                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},10);
-            }
+        }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before !== 1){
+            Before = 1;
+            Count_Yes = 0;
+            document.getElementById('main_' + String(i)).src = NO_Lock_image;
+            setInterval(() => {Count_Yes += 0.001
+            document.getElementById('main_' + String(i)).style.opacity = Count_Yes},10);
+            
         }
     }
     })//.catch(Error())
