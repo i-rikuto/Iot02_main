@@ -1,5 +1,6 @@
 body{
     background-color: rgb(255, 255, 255);
+    background-image: url(./background_image.png);
 }
 
 nav>ul>li{
