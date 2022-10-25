@@ -96,7 +96,7 @@ function Reroad_Api(){
                     console.log(i);
                 }
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
-                if(Count_Yes[i - 1] >= 1){clearInterval(Interval[i])}
+                if(Count_Yes[i - 1] > 1){clearInterval(Interval[i])}
             },10);
         }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1){
             Before[i - 1] = 1;
@@ -109,7 +109,7 @@ function Reroad_Api(){
                     console.log(i);
                 }
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]},10);
-                if(Count_Yes[i - 1] >= 1){clearInterval(Interval[i])}
+                if(Count_Yes[i - 1] > 1){clearInterval(Interval[i])}
         }else{
             console.log("else");
         }
