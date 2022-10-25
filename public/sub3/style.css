@@ -14,7 +14,7 @@ main{
     display: flex;
     justify-content: space-evenly;
     margin-left: auto;
-    margin-top: 130px;
+    /* margin-top: 130px; */
 }
 
 
