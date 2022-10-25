@@ -69,7 +69,7 @@
     const NO_Lock_image = ["/image/no_Lock.png"];
     //const NO_Lock_image = ["/image/IMG_20221025_113948.jpg"];
     const Error_image = ["/image/error_Lock.png"];
-
+    let Count_Yes = 0;
 function Reroad_Api(){
     
     fetch(url)
@@ -83,6 +83,8 @@ function Reroad_Api(){
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no'){
             document.getElementById('main_' + String(i)).src = Lock_image;
+            setInterval(() => {Count_Yes += 0.1
+                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},0.1);
         }else{
             document.getElementById('main_' + String(i)).src = NO_Lock_image;
         }
