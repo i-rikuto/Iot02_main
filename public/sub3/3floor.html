@@ -84,7 +84,7 @@ function Reroad_Api(){
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no'){
             document.getElementById('main_' + String(i)).src = Lock_image;
             setInterval(() => {Count_Yes += 0.1
-                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},1);
+                document.getElementById('main_' + String(i)).style.opacity = Count_Yes},1000);
         }else{
             document.getElementById('main_' + String(i)).src = NO_Lock_image;
         }
