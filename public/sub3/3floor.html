@@ -83,7 +83,7 @@ function Reroad_Api(){
     //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
-        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
+        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] === 1){
             Before[i - 1] = 0;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.01;
@@ -94,7 +94,7 @@ function Reroad_Api(){
                     console.log(i);
                 }
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]},10);
-        }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1){
+        }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] === 0){
             Before[i - 1] = 1;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.01;
