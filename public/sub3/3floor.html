@@ -89,27 +89,29 @@ function Reroad_Api(){
             Before[i - 1] = 0;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.01;
-            Interval[i] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
+            Interval[i - 1] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
                 if(Count_Yes[i - 1] <= -0.3){
                     plus[i - 1] = 0.01;
                     document.getElementById('main_' + String(i)).src = Lock_image;
                     console.log(i);
                 }
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
-                if(Count_Yes[i - 1] > 1){clearInterval(Interval[i])}
+                if(Count_Yes[i - 1] > 1){clearInterval(Interval[i - 1]);
+                console.log("stop");}
             },10);
         }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1){
             Before[i - 1] = 1;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.01;
-            Interval[i] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
+            Interval[i - 1] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
                 if(Count_Yes[i - 1] <= -0.3){
                     plus[i - 1] = 0.01;
                     document.getElementById('main_' + String(i)).src = NO_Lock_image;
                     console.log(i);
                 }
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]},10);
-                if(Count_Yes[i - 1] > 1){clearInterval(Interval[i])}
+                if(Count_Yes[i - 1] > 1){clearInterval(Interval[i - 1]);
+                console.log("stop");}
         }else{
             console.log("else");
         }
