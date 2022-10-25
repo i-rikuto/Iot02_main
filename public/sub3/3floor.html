@@ -72,6 +72,8 @@
     let Count_Yes = [0,0,0];
     let Before = [3,3,3];
     let plus = [3,3,3];
+    let Interval = [];
+    let Interval_Count;
 function Reroad_Api(){
     
     fetch(url)
@@ -83,29 +85,31 @@ function Reroad_Api(){
     //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
-        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] === 1){
+        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
             Before[i - 1] = 0;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.01;
-            setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
+            Interval[i] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
                 if(Count_Yes[i - 1] <= -0.3){
                     plus[i - 1] = 0.01;
                     document.getElementById('main_' + String(i)).src = Lock_image;
                     console.log(i);
                 }
-                document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]},10);
-        }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] === 0){
+                document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
+                if(Count_Yes[i - 1] >= 1){clearInterval(Interval[i])}
+            },10);
+        }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1){
             Before[i - 1] = 1;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.01;
-            setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
+            Interval[i] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
                 if(Count_Yes[i - 1] <= -0.3){
                     plus[i - 1] = 0.01;
                     document.getElementById('main_' + String(i)).src = NO_Lock_image;
                     console.log(i);
                 }
                 document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]},10);
-            
+                if(Count_Yes[i - 1] >= 1){clearInterval(Interval[i])}
         }else{
             console.log("else");
         }
