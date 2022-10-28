@@ -1,9 +1,11 @@
-body{
+/* body{
     background-color: rgb(255, 255, 255);
     background-image: url(./background_image.png);
     background-size: 200px;
     animation: bg 10s infinite linear;
 }
+
+
 
 @keyframes bg {
     0% {
@@ -12,9 +14,12 @@ body{
     100% {
       background-position: 36px -36px;
     }
-  }
+  } */
 
-
+body{
+    width: 100vh;
+    height: 100vh;
+}
 
 nav>ul>li{
     background-color: rgb(255, 225, 0);
@@ -35,16 +40,17 @@ nav>ul>li{
 ul>li>a{
     padding-bottom: 5px;
     position: relative;
+    display: block;
 }
 
 ul>li>a::before{
-    background: #ff701e;
+    background: #ffaa00;
     content: '';
-    width: 100%;
+    width: 60%;
     height: 2px;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 38px;
+    bottom: 22px;
     margin: auto;
     transform-origin: right top;
     transform: scale(0, 1);
@@ -128,3 +134,50 @@ header{
 header>img{
     padding: 10px 2px 0px 0px;
 }
+/* iPad */
+@media screen and (max-width: 768px) {
+
+ }
+ /* スマホ */
+ @media screen and (max-width: 480px) {
+    nav>ul>li{
+        background-color: rgb(255, 225, 0);
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        list-style: none;
+        /* border:  #ffcc00; */
+        font-family: serif;
+        text-align: center;
+        line-height: 60px;
+        transition: background-color 0.7s,border-bottom 0.2s;
+        border-left: solid rgb(255, 242, 0);
+        /* transition: width .5s; */
+        /* transition: height 1s; */
+    }
+
+    ul>li>a{
+        padding-bottom: 5px;
+        position: center;
+        display: block;
+    }
+
+    ul{
+        /* width: 100%; */
+        /* position: fixed; */
+        display: inline;
+        justify-content: none;
+        margin-left: 0px;
+    }
+    nav{
+        position: absolute;
+        visibility: hidden;
+        right: 0;
+    }
+
+    
+    #toggle:checked ~ nav{
+        visibility: visible;
+
+    }
+ }
