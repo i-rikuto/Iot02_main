@@ -10,7 +10,7 @@ app.use(express.json());
 //app.use(express.static('sub3'))
 app.use(express.static('public'));
 app.use(express.static('public/sub3'));
-app.use(express.static('public/contact'));
+//app.use(express.static('public/contact'));
 
 
 //app.listen(8888,console.log("サーバーが開始!!!"));
