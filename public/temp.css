@@ -1,24 +1,24 @@
-/* body{
-    background-color: rgb(255, 255, 255);
-    background-image: url(./background_image.png);
-    background-size: 200px;
-    animation: bg 10s infinite linear;
+
+
+footer{
+    height: 100px;
+    width: 100vw;
+    background-color: #ffdc43da;
+    position: absolute;
+    bottom: 0px;
 }
 
-
-
-@keyframes bg {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 36px -36px;
-    }
-  } */
-
+small{
+    position: absolute;
+    width: auto;
+    height: auto;
+    bottom: 10px;
+    left: 40%;
+    color: rgb(131, 131, 131);
+    font-family: "Gill Sans", sans-serif;
+}
 
 body{
-    /* width: 100vh; */
     height: 100vh;
 }
 
@@ -43,6 +43,7 @@ nav>ul>li{
     line-height: 60px;
     transition: background-color 0.7s,border-bottom 0.2s;
     border-left: solid rgb(255, 242, 0);
+    border-radius: 5px;
     /* transition: width .5s; */
     /* transition: height 1s; */
 }
@@ -105,10 +106,11 @@ h2{
     height: 70px;
     font-weight: 100;
     border-left:10px solid rgb(255, 225, 0);
-    background-color: rgb(237, 237, 237);
+    background-color: aliceblue;
     padding-top: 10px;
     text-align: center;
     border-bottom: 2px solid gray;
+    border-radius: 10px;
     /* margin-top: 10px; */
 }
 
@@ -116,6 +118,7 @@ h1{
     padding-top: 20px;
     padding-left: 5px;
     white-space: nowrap;
+    
 }
 
 
@@ -152,7 +155,7 @@ header>img{
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(161, 161, 161) 50%, rgb(255, 255, 255) 50%);
+    background-image: linear-gradient(-60deg, rgb(236, 188, 255) 50%, rgb(241, 224, 247) 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
@@ -190,6 +193,7 @@ header>img{
  @media screen and (max-width: 480px) {
     #toggle{
         visibility: visible;
+        background-image: url("menu_button.png");
     }
 
     nav>ul>li{
@@ -219,18 +223,25 @@ header>img{
         /* position: fixed; */
         display: inline;
         justify-content: none;
-        margin-left: 0px;
+        
     }
     nav{
+        width: auto;
+        height: auto;
         position: absolute;
         visibility: hidden;
+        top: 0;
         right: 0;
+        bottom: 0;
     }
 
+    #toggle input label::after{
+
+        background-image: url("menu_button.png");
+    }
     
     #toggle:checked ~ nav{
         visibility: visible;
-
     }
 
     p{

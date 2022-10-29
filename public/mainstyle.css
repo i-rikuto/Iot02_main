@@ -87,6 +87,7 @@ h1{
 }
 
 p{
+    padding: 5px;
     margin-left: 30px;
     margin-top: 10px;
 }
@@ -111,6 +112,15 @@ header>img{
     padding: 10px 2px 0px 0px;
 }
 
+p{
+    height: 100px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+span{
+    font-weight: 500;
+}
 
   
   
