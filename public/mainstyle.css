@@ -114,8 +114,9 @@ header>img{
 
 p{
     height: 100px;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
+    border-style: inset;
 }
 
 span{

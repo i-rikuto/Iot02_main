@@ -104,13 +104,13 @@ h2{
     margin-left: 30px;
     width: 400px;
     height: 70px;
-    font-weight: 100;
+    font-weight: 200;
     border-left:10px solid rgb(255, 225, 0);
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     padding-top: 10px;
     text-align: center;
-    border-bottom: 2px solid gray;
-    border-radius: 10px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 30px;
     /* margin-top: 10px; */
 }
 
@@ -124,8 +124,10 @@ h1{
 
 
 p{
+    font-size: 20px;
     margin-left: 30px;
     margin-top: 10px;
+    width: 80vw;
 }
 
 .non,.non>a:hover{
@@ -155,7 +157,7 @@ header>img{
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(236, 188, 255) 50%, rgb(241, 224, 247) 50%);
+    background-image: linear-gradient(-60deg, rgb(246, 223, 255) 50%, rgb(246, 235, 250) 50%);
     bottom:0;
     left:-50%;
     opacity:.5;

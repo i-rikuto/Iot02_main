@@ -12,7 +12,7 @@
 
 main{  
     display: flex;
-    justify-content: space-evenly;
+    
     margin-left: auto;
     /* margin-top: 130px; */
 }
@@ -21,10 +21,14 @@ main{
 .LockImage>p{
     font-size: 20px;
     clear: both;
-    background-color: black;
-    color: white;
+    background-color: rgb(251, 255, 0);
+    color: rgb(0, 0, 0);
     font-family: "メイリオ";
     text-align: center;
+    border-radius: 30px;
+    width: 30vw;
+    height: 30px;
+    padding-top: 5px;
 }
 
 
@@ -85,7 +89,8 @@ ul>li:hover{
 
 a{
     text-decoration: none;   
-    color: black;
+    color: rgb(109, 109, 109);
+    border-radius: 10px;
 }
 
 ul{
@@ -129,4 +134,12 @@ header{
 
 header>img{
     padding: 10px 2px 0px 0px;
+}
+
+.LockImage{
+    width: auto;
+}
+
+#main_1,#main_2,#main_3{
+    border-radius: 30px;
 }
