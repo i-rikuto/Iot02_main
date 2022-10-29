@@ -16,14 +16,24 @@
     }
   } */
 
+
 body{
-    width: 100vh;
+    /* width: 100vh; */
     height: 100vh;
+}
+
+nav{
+    margin: 0 0 0 auto;
+    width: 80%;
+}
+
+header{
+    width: 100%;
 }
 
 nav>ul>li{
     background-color: rgb(255, 225, 0);
-    width: 200px;
+    width: 100%;
     height: 60px;
     font-size: 20px;
     list-style: none;
@@ -83,7 +93,7 @@ ul{
     /* position: fixed; */
     display: flex;
     justify-content: space-evenly;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 
 h2{
@@ -125,7 +135,7 @@ header{
     display: flex;
     width: auto;
     background-color: rgb(237, 237, 237);
-    padding-left: 30px;
+    /* padding-left: 30px; */
     border-bottom: 2px solid gray;
 }
 
@@ -133,13 +143,55 @@ header{
 
 header>img{
     padding: 10px 2px 0px 0px;
+    margin-left: 1%;
 }
+
+#toggle{
+    visibility: hidden;
+}
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(161, 161, 161) 50%, rgb(255, 255, 255) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-15%);
+    }
+    100% {
+      transform:translateX(15%);
+    }
+  }
 /* iPad */
 @media screen and (max-width: 768px) {
 
  }
  /* スマホ */
  @media screen and (max-width: 480px) {
+    #toggle{
+        visibility: visible;
+    }
+
     nav>ul>li{
         background-color: rgb(255, 225, 0);
         width: 200px;
@@ -179,5 +231,9 @@ header>img{
     #toggle:checked ~ nav{
         visibility: visible;
 
+    }
+
+    p{
+        font-size: 16px;
     }
  }

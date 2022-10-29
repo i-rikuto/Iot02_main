@@ -64,7 +64,7 @@ ul{
     /* position: fixed; */
     display: flex;
     justify-content: space-evenly;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 
 h2{
@@ -101,7 +101,7 @@ header{
     display: flex;
     width: 100%;
     background-color: rgb(237, 237, 237);
-    padding-left: 30px;
+    /* padding-left: 30px; */
     
 }
 
@@ -114,35 +114,4 @@ header>img{
 
   
   
-  .bg {
-    animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(161, 161, 161) 50%, rgb(255, 255, 255) 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
-  }
-  
-  .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
-  }
-  
-  .bg3 {
-    animation-duration:5s;
-  }
-  
-  
-  
-  
-  @keyframes slide {
-    0% {
-      transform:translateX(-15%);
-    }
-    100% {
-      transform:translateX(15%);
-    }
-  }
+ 
