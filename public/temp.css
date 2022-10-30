@@ -1,4 +1,7 @@
 
+.push{
+    height: 100px;
+}
 
 footer{
     height: 100px;
@@ -20,7 +23,6 @@ small{
 
 body{
     height: 100vh;
-    padding-bottom: 100px;
 }
 
 nav{
