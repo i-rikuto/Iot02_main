@@ -190,7 +190,7 @@ header>img{
         height: 100px;
         width: 100vw;
         background-color: #ffdc43da;
-
+        visibility: hidden;
         bottom: 0px;
         margin-bottom: -100px;
     }
