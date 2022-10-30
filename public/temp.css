@@ -10,6 +10,7 @@ footer{
     position: absolute;
     bottom: 0px;
     margin-bottom: -100px;
+    min-width: 900px;
 }
 
 small{
@@ -24,6 +25,10 @@ small{
 
 body{
     height: 100vh;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 nav{
@@ -113,7 +118,6 @@ h2{
     background-color: rgb(255, 255, 255);
     padding-top: 10px;
     text-align: center;
-    border-bottom: 2px solid rgb(255, 255, 255);
     border-radius: 30px;
     /* margin-top: 10px; */
 }
@@ -132,6 +136,7 @@ p{
     margin-left: 30px;
     margin-top: 10px;
     width: 80vw;
+    border: solid 3px rgb(255, 225, 0);
 }
 
 .non,.non>a:hover{
@@ -143,7 +148,7 @@ header{
     height: 60px;
     display: flex;
     width: auto;
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(255, 244, 229);
     /* padding-left: 30px; */
     border-bottom: 2px solid gray;
 }
@@ -252,5 +257,6 @@ header>img{
 
     p{
         font-size: 16px;
+
     }
  }

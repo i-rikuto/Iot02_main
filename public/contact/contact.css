@@ -92,10 +92,14 @@ header{
     display: flex;
     width: 100%;
     background-color: rgb(237, 237, 237);
-    padding-left: 30px;
+    /* padding-left: 30px; */
     
 }
 
 header>img{
     padding: 10px 2px 0px 0px;
+}
+
+p{
+    border: none;
 }

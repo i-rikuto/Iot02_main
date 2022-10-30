@@ -113,6 +113,12 @@ h1{
     padding-top: 20px;
 }
 
+#url>p{
+    margin-left: 30px;
+    margin-top: 10px;
+    
+}
+
 p{
     margin-left: 30px;
     margin-top: 10px;
@@ -128,7 +134,7 @@ header{
     display: flex;
     width: 100%;
     background-color: rgb(237, 237, 237);
-    padding-left: 30px;
+    /* padding-left: 30px; */
     
 }
 
@@ -158,5 +164,12 @@ header>img{
         /* position: fixed; */
         display: inline;
         
+    }
+
+    #main_1,#main_2,#main_3{
+        border-radius: 30px;
+        width: auto;
+        height: 200px;
+        margin-left: 30px;
     }
 }
