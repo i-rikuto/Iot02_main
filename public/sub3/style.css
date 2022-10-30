@@ -153,5 +153,10 @@ header>img{
 }
 /* スマホ */
 @media screen and (max-width: 480px) {
-   
+    ul{
+        /* width: 100%; */
+        /* position: fixed; */
+        display: inline;
+        
+    }
 }
