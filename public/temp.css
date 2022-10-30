@@ -259,4 +259,8 @@ header>img{
         font-size: 16px;
 
     }
+
+    body{
+        height: 100vh;
+    }
  }

@@ -168,8 +168,8 @@ header>img{
 
     #main_1,#main_2,#main_3{
         border-radius: 30px;
-        width: auto;
-        height: 200px;
+        width: 80vw;
+        height: auto;
         margin-left: 30px;
     }
 
