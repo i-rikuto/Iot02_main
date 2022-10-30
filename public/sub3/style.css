@@ -172,4 +172,17 @@ header>img{
         height: 200px;
         margin-left: 30px;
     }
+
+    .LockImage>p{
+        font-size: 20px;
+        clear: both;
+        background-color: rgb(251, 255, 0);
+        color: rgb(0, 0, 0);
+        font-family: "メイリオ";
+        text-align: center;
+        border-radius: 30px;
+        width: 80vw;
+        height: 30px;
+        padding-top: 5px;
+    }
 }
