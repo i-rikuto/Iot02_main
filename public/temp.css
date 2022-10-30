@@ -1,6 +1,7 @@
 
 .push{
     height: 100px;
+    width: 100vw;
 }
 
 footer{
@@ -10,7 +11,6 @@ footer{
     position: absolute;
     bottom: 0px;
     margin-bottom: -100px;
-    min-width: 900px;
 }
 
 small{
