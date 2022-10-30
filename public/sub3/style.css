@@ -142,4 +142,15 @@ header>img{
 
 #main_1,#main_2,#main_3{
     border-radius: 30px;
+    width: 30vw;
+    height: 400px;
+}
+
+/* iPad */
+@media screen and (max-width: 768px) {
+
+}
+/* スマホ */
+@media screen and (max-width: 480px) {
+   
 }
