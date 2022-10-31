@@ -253,11 +253,18 @@ header>img{
         bottom: 0;
     }
 
-    #toggle input label::after{
+    /* #toggle input label::after{
+        background-image: url("menu_button.png");
+    } */
+    
+    ._checkbox input {
+        display: none; /*デフォルトのチェックボックスを非表示 */
+      }
 
+    ._checkbox input + .check-text::before{
         background-image: url("menu_button.png");
     }
-    
+
     #toggle:checked ~ nav{
         visibility: visible;
     }
