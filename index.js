@@ -119,11 +119,11 @@ app.post("/api/post/:data/:number",(req,res)=>{
 
     Datas[req.params.number - 1].push(post);
     
-    for(let k = 1;k <= 3;k++){
+    for(let k = 1;k <= 4;k++){
         avg += parseFloat(Datas[req.params.number - 1].find((c) => c.id === parseInt(Datas[req.params.number - 1].length - k)).data);
     }
     //k = 1
-    avg /= 3;
+    avg /= 4;
     console.log(req.params.number + "の移動平均は" + avg);
     if(avg > 1000){
         lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "yes";
