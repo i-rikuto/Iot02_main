@@ -170,7 +170,7 @@ header>img{
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(246, 223, 255) 50%, rgb(246, 235, 250) 50%);
+    background-image: linear-gradient(-60deg, rgb(232, 173, 255) 50%, rgb(246, 235, 250) 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
@@ -257,11 +257,11 @@ header>img{
         background-image: url("menu_button.png");
     } */
     
-    ._checkbox input {
+    ._checkbox>input {
         display: none; /*デフォルトのチェックボックスを非表示 */
       }
 
-    ._checkbox input + .check-text::before{
+    label{
         background-image: url("menu_button.png");
     }
 
