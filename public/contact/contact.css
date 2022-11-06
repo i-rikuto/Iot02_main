@@ -103,3 +103,9 @@ header>img{
 p{
     border: none;
 }
+
+.container {
+    height: 100vh;
+    background: url(../background_image.png) center center;
+    background-size: cover;
+  }
