@@ -40,6 +40,12 @@
         <p>フッターに問題があるため成果物ページのフッターを<br>非表示にしました。</p>
         <h2>2022/11/6</h2>
         <p>フッターの問題をある程度修正しました。</p>
+        <h2>2022/11/7</h2>
+        <p>サイト全体の配色を見直しました。</p>
+        <h2>2022/11/7</h2>
+        <p>フッターの問題を完全に修正しました。</p>
+        <h2>2022/11/7</h2>
+        <p>一部訂正。大阪電気通信高等学校=>大阪電気通信"大学"高等学校</p>
     </main>
 </div>
     <div class="push"></div>
@@ -50,5 +56,16 @@
 <script>
 
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>bubbly({animate: true, 
+	blur: 5, 
+	bubbleFunc: () => `hsla(${Math.random() * (120 - 90) + 90}, 80%, 50%, 1)`, 
+	//bubbleFunc: "#4c004c", 
+	bubbles: 30, 
+	canvas: document.querySelector("#background"), 
+	colorStart: "#f0f8ff", 
+	colorStop: "#f0f8ff",
+	compose: "lighter", 
+	shadowColor: "#008000", 
+  });</script>
 </html>

@@ -11,7 +11,7 @@ html{
 footer{
     height: 100px;
     width: 100vw;
-    background-color: #ffdc43da;
+    background-color: rgb(44, 188, 0);
     /* position: absolute; */
     /* bottom: 0px; */
     /* margin-bottom: -100px; */
@@ -21,9 +21,9 @@ small{
     /* position: absolute; */
     width: auto;
     height: auto;
-    bottom: 10px;
-    left: 40%;
-    color: rgb(131, 131, 131);
+    margin-top: 20px;
+    margin-left: 40%;
+    color: rgb(255, 255, 255);
     font-family: "Gill Sans", sans-serif;
 }
 
@@ -125,11 +125,12 @@ h2{
     width: 400px;
     height: 70px;
     font-weight: 200;
-    border-left:10px solid rgb(255, 225, 0);
+    border: 1px solid black;
+    border-left:6px solid rgb(44, 188, 0);
     background-color: rgb(255, 255, 255);
     padding-top: 10px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 10px 0px 10px 0px;
     /* margin-top: 10px; */
 }
 
@@ -147,7 +148,7 @@ p{
     margin-left: 30px;
     margin-top: 10px;
     width: 80vw;
-    border: solid 3px rgb(255, 225, 0);
+    border: solid 3px rgb(44, 188, 0);
 }
 
 .non,.non>a:hover{
@@ -222,7 +223,7 @@ header>img{
     }
 
     nav>ul>li{
-        background-color: rgb(255, 225, 0);
+        /* background-color: rgb(255, 225, 0); */
         width: 200px;
         height: 60px;
         font-size: 20px;
@@ -232,7 +233,7 @@ header>img{
         text-align: center;
         line-height: 60px;
         transition: background-color 0.7s,border-bottom 0.2s;
-        border-left: solid rgb(255, 242, 0);
+        /* border-left: solid rgb(255, 242, 0); */
         /* transition: width .5s; */
         /* transition: height 1s; */
     }
@@ -298,18 +299,18 @@ header>img{
         width: 80%;
         height: 70px;
         font-weight: 200;
-        border-left:10px solid rgb(255, 225, 0);
+        border-left:3px solid rgb(44, 188, 0);
         background-color: rgb(255, 255, 255);
         padding-top: 10px;
         text-align: center;
-        border-radius: 30px;
+        border-radius: 10px 0px 10px 0px;
         /* margin-top: 10px; */
         
     }
     footer{
         height: 100px;
         width: 100vw;
-        background-color: #ffdc43da;
+        background-color: rgb(44, 188, 0);
         position: sticky;
         top: 100vh;
         width: 100%;

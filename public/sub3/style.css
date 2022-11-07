@@ -20,9 +20,10 @@ main{
 
 .LockImage>p{
     font-size: 20px;
+    margin-bottom: 10px;
     clear: both;
-    background-color: rgb(251, 255, 0);
-    color: rgb(0, 0, 0);
+    background-color: rgb(44, 188, 0);
+    color: rgb(255, 255, 255);
     font-family: "メイリオ";
     text-align: center;
     border-radius: 30px;
@@ -147,7 +148,7 @@ header>img{
 }
 
 #main_1,#main_2,#main_3{
-    border-radius: 30px;
+    border-radius: 100px;
     width: 30vw;
     height: 400px;
     margin-left: 30px;
@@ -167,7 +168,7 @@ header>img{
     }
 
     #main_1,#main_2,#main_3{
-        border-radius: 30px;
+        border-radius: 130px;
         width: 80vw;
         height: auto;
         margin-left: 30px;
@@ -175,9 +176,10 @@ header>img{
 
     .LockImage>p{
         font-size: 20px;
+        margin-bottom: 10px;
         clear: both;
-        background-color: rgb(251, 255, 0);
-        color: rgb(0, 0, 0);
+        background-color: rgb(44, 188, 0);
+        color: rgb(255, 255, 255);
         font-family: "メイリオ";
         text-align: center;
         border-radius: 30px;

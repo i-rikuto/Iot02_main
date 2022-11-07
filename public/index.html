@@ -41,12 +41,24 @@
             このサイトはトップページです。
         </p>
     </main>
+    <div style="height: 250px;"></div>
     <div class="push"></div>
     <footer>
         <small>&copy; 2022 r-izume </small>
     </footer>
     
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+  <script>bubbly({animate: true, 
+	blur: 5, 
+	bubbleFunc: () => `hsla(${Math.random() * (120 - 90) + 90}, 80%, 50%, 1)`, 
+	//bubbleFunc: "#4c004c", 
+	bubbles: 30, 
+	canvas: document.querySelector("#background"), 
+	colorStart: "#f0f8ff", 
+	colorStop: "#f0f8ff",
+	compose: "lighter", 
+	shadowColor: "#008000", 
+  });</script>
 
 </html>
