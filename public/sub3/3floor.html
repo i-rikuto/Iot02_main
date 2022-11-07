@@ -53,25 +53,25 @@
         <small>&copy; 2022 r-izume </small>
     </footer>
     <script>
-    //     console.log(location.href);
-    //     let url = "";
-    //     window.onload =() =>{
-    //     let _url = location.href
-    //     if(_url == 'https://www.izumain.net/sub3/3floor.html'){
-    //         console.log("OK");
-    //         url = 'https://www.izumain.net/api/locks_data';
-    //         document.getElementById("now_where").textContent = "現在正式なサイトです。";
-    //     }else if(_url == 'https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html'){
-    //         console.log("None")
-    //         url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
-    //         document.getElementById("now_where").textContent = "現在対MC2Wi-Fiのサイトです。";
-    //         document.getElementById("MC2page").textContent = "対MC2Wi-Fiのトップページへ。";
-    //         document.getElementById("Mainpage").textContent = "正式なトップページへ。";
-    //         document.getElementById("Mainpage").href = "https://www.izumain.net";
-    //     }else{
-    //         document.getElementById("now_where").textContent = "現在未知のサイトです。";
-    //     }
-    // }
+        console.log(location.href);
+        let url = "";
+        window.onload =() =>{
+        let _url = location.href
+        if(_url == 'https://www.izumain.net/sub3/3floor.html'){
+            console.log("OK");
+            url = 'https://www.izumain.net/api/locks_data';
+            //document.getElementById("now_where").textContent = "現在正式なサイトです。";
+        }else if(_url == 'https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html'){
+            console.log("None")
+            url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
+            // document.getElementById("now_where").textContent = "現在対MC2Wi-Fiのサイトです。";
+            // document.getElementById("MC2page").textContent = "対MC2Wi-Fiのトップページへ。";
+            // document.getElementById("Mainpage").textContent = "正式なトップページへ。";
+            // document.getElementById("Mainpage").href = "https://www.izumain.net";
+        }else{
+            //document.getElementById("now_where").textContent = "現在未知のサイトです。";
+        }
+    }
     
     const Lock_image = ["/image/Lock.png"];
     const NO_Lock_image = ["/image/no_Lock.png"];
