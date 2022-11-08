@@ -112,9 +112,14 @@ app.get("/api/datas/:where",(req,res) =>{
 let avg = 0.0;
 //データを送信,追加(POST)
 app.post("/api/post/:data/:number",(req,res)=>{
+    let _data = 0;
+    _data = req.params.data;
+    if(_data >= 3000){
+        _data = 2000;
+    }
     const post = {
         id: Datas[req.params.number - 1].length + 1,
-        data: req.params.data
+        data: _data
     };
 
     Datas[req.params.number - 1].push(post);
