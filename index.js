@@ -114,8 +114,8 @@ let avg = 0.0;
 app.post("/api/post/:data/:number",(req,res)=>{
     let _data = 0;
     _data = req.params.data;
-    if(_data >= 1000){
-        _data = 1000;
+    if(_data >= 500){
+        _data = 500;
     }
     const post = {
         id: Datas[req.params.number - 1].length + 1,
