@@ -114,7 +114,7 @@ let avg = 0.0;
 app.post("/api/post/:data/:number",(req,res)=>{
     let _data = 0;
     _data = req.params.data;
-    if(_data >= 3000){
+    if(_data >= 2000){
         _data = 2000;
     }
     const post = {
