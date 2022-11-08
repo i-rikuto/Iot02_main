@@ -114,8 +114,8 @@ let avg = 0.0;
 app.post("/api/post/:data/:number",(req,res)=>{
     let _data = 0;
     _data = req.params.data;
-    if(_data >= 2000){
-        _data = 2000;
+    if(_data >= 1000){
+        _data = 1000;
     }
     const post = {
         id: Datas[req.params.number - 1].length + 1,
@@ -130,7 +130,7 @@ app.post("/api/post/:data/:number",(req,res)=>{
     //k = 1
     avg /= 5;
     console.log(req.params.number + "の移動平均は" + avg);
-    if(avg > 300){
+    if(avg > 50){
         lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "yes";
     }else{
         lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "no";
