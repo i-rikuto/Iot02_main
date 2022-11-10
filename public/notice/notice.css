@@ -5,3 +5,11 @@ p{
     border-style: inset;
     padding:10px;
 }
+
+.front{
+    /* height: auto;
+    width: auto; */
+    /* width: auto + 10px;
+    background-color: rgba(153, 255, 130, 0.345); */
+    margin-top: 5%;
+}

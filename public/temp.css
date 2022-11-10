@@ -125,12 +125,12 @@ h2{
     width: 400px;
     height: 70px;
     font-weight: 200;
-    border: 1px solid black;
-    border-left:6px solid rgb(44, 188, 0);
-    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-left:8px solid rgb(44, 188, 0);
+    background-color: rgb(233, 254, 226);
     padding-top: 10px;
     text-align: center;
-    border-radius: 10px 0px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
     /* margin-top: 10px; */
 }
 
@@ -318,5 +318,7 @@ header>img{
         /* margin-bottom: -100px; */
     }
 
-
+    /* .check_box{
+        background-image: url("menu_button.png");
+    } */
  }
