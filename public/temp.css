@@ -131,6 +131,7 @@ h1,h2{
     padding-top: 10px;
     text-align: center;
     border-radius: 0px 10px 10px 0px;
+    font-weight: bold;
     /* margin-top: 10px; */
 }
 
@@ -307,7 +308,7 @@ header>img{
         margin-left: 30px;
         width: 80%;
         height: 70px;
-        font-weight: 200;
+        font-weight: bold;
         border-left:3px solid rgb(44, 188, 0);
         background-color: rgb(255, 255, 255);
         padding-top: 10px;
