@@ -117,7 +117,7 @@ ul{
     /* margin-left: 150px; */
 }
 
-h2{
+h1,h2{
     margin-top: 40px;
     font-size: 50px;
     font-family: system-ui;
@@ -127,20 +127,25 @@ h2{
     font-weight: 200;
     border: 1px solid rgb(255, 255, 255);
     border-left:8px solid rgb(44, 188, 0);
-    background-color: rgb(233, 254, 226);
+    background-color: rgb(255, 255, 255);
     padding-top: 10px;
     text-align: center;
     border-radius: 0px 10px 10px 0px;
     /* margin-top: 10px; */
 }
 
-h1{
+#Top{
     padding-top: 20px;
     padding-left: 5px;
+    
     white-space: nowrap;
     
 }
 
+#Top>a{
+    font-size: 20px;
+    font-family: system-ui;
+}
 
 
 p{
@@ -291,7 +296,7 @@ header>img{
         min-height: 100%;
     }
 
-    h2{
+    h1,h2{
         margin-top: 40px;
         font-size: 40px;
         font-family: system-ui;
