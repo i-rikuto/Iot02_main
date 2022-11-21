@@ -144,9 +144,9 @@ app.post("/api/post/:data/:number",(req,res)=>{
 //データの更新(put)
 app.put("/api/put/:data/:id",(req,res) =>{
     let _data = 0;
-    _data = req.params.data;
-    if(Datas_Number[req.params.id] = 6){
-        Datas_Number[req.params.id] = 1
+    _data = parseFloat(req.params.data);
+    if(Datas_Number[req.params.id - 1] === 6){
+        Datas_Number[req.params.id - 1] = 1
     }
     if(_data >= 500){
         _data = 500;
@@ -155,23 +155,25 @@ app.put("/api/put/:data/:id",(req,res) =>{
         id: Datas_Number[req.params.id],
         data: _data
     };
-    let id = Datas[req.params.id].find((c) => c.id === parseInt(Datas_Number[req.params.id]));
-    id.data = _data;
-    Datas[Datas_Number[req.params.id]].put(post);
-    Datas_Number[req.params.id]++;
+    let _id = Datas[req.params.id - 1].find((c) => c.id === parseInt(Datas_Number[req.params.id - 1]));
+    _id.data = _data;
+    //id = req.params.id
+    //Datas[Datas_Number[req.params.id]].put(post);
+    Datas_Number[req.params.id - 1]++;
     
     
     
     for(let k = 1;k <= 5;k++){
-        avg += parseFloat(Datas[req.params.number - 1].find((c) => c.id === k));
+        console.log(Datas[req.params.id - 1].find((c) => c.id === k));
+        avg += parseFloat((Datas[req.params.id - 1].find((c) => c.id === k)).data);
     }
     //k = 1
     avg /= 5;
-    console.log(req.params.number + "の移動平均は" + avg);
+    console.log(req.params.id + "の移動平均は" + avg);
     if(avg > 80){
-        lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "yes";
+        lock_data.find((c) => c.id === parseInt(req.params.id)).lock = "yes";
     }else{
-        lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "no";
+        lock_data.find((c) => c.id === parseInt(req.params.id)).lock = "no";
     }
     avg = 0.0;
     console.log("push!");
