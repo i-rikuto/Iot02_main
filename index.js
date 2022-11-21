@@ -203,5 +203,7 @@ function Time_Count(){
 setInterval(() => {for(let l = 1;l <= 3;l++){
     if(lock_data.find((c) => c.id === l).lock === 'no'){
     lock_data.find((c) => c.id === l).time += 1;
+    }else{
+        lock_data.find((c) => c.id === l).time = 0;
     }
 }},1000);
