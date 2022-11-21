@@ -32,16 +32,25 @@
     </header>
     <main style="margin-top: 30px;">
         <dev class="LockImage">
-            <p id="Time_1">手前</p>
+            <p>手前</p>
             <img id="main_1" src="image/error_Lock.png"  alt="鍵の画像">
+            <p id="Time_1"style="background-color: orange;
+            margin-top: 0px;
+            border:none" ></p>
         </dev>
         <dev class="LockImage">
-            <p id="Time_2">中間</p>
+            <p>中間</p>
             <img id="main_2" src="image/error_Lock.png"  alt="鍵の画像">
+            <p id="Time_2"style="background-color: orange;
+            margin-top: 0px;
+            border:none" ></p>
         </dev>
         <dev class="LockImage">
-            <p id="Time_3">奥</p>
+            <p>奥</p>
             <img id="main_3" src="image/error_Lock.png"  alt="鍵の画像">
+            <p id="Time_3"style="background-color: orange;
+            margin-top: 0px;
+            border:none" ></p>
         </dev>
     </main>
     <!-- <p style="border: none;"><a href="../index.html" id="Mainpage">トップページへ</a></p>
@@ -94,7 +103,7 @@ function Reroad_Api(){
     //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
         //console.log(Data_Json.find((c) => c.id === parseInt(i)).time)
-        document.getElementById('Time_' + String(i)).textContent = String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time/60)) + '分経過';
+        document.getElementById('Time_' + String(i)).textContent = String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time/60)) + '分' + String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time%60) + '秒経過');
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
             Before[i - 1] = 0;
@@ -141,7 +150,7 @@ function Error(){
 }
 
 
-setInterval("Reroad_Api()", 500);
+setInterval("Reroad_Api()", 1000);
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
   <script>bubbly({animate: true, 
