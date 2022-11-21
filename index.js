@@ -31,11 +31,11 @@ app.listen(process.env.PORT || 8888,console.log("サーバーが開始!!!"));
 
 //取得するデータ(json)
 const lock_data = [
-    {where:"",lock:"no",id:1},
-    {where:"",lock:"no",id:2},
-    {where:"",lock:"no",id:3},
-    {where:"",lock:"no",id:4},
-    {where:"",lock:"no",id:5},
+    {where:"",lock:"no",id:1,time:0},
+    {where:"",lock:"no",id:2,time:0},
+    {where:"",lock:"no",id:3,time:0},
+    {where:"",lock:"no",id:4,time:0},
+    {where:"",lock:"no",id:5,time:0},
     {where:"",lock:"no",id:6},
     {where:"",lock:"no",id:7},
     {where:"",lock:"no",id:8},
@@ -195,3 +195,11 @@ app.delete("/api/put/:id",(req,res) =>{
 });
 
 //setInterval(() => console.log(Datas),10000);
+
+function Time_Count(){
+    
+}
+
+setInterval(() => {for(let l = 1;l <= 3;l++){
+    lock_data.find((c) => c.id === l).time += 10;
+}},10000);
