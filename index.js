@@ -69,6 +69,7 @@ const Distance_Data = [
 ]
 
 //データの格納
+let Datas_Number = [1,1,1,1,1];
 let Datas = []
 for(let i = 0;i < 15;i++){
     Datas[i] = [{id:1,data:0.00},
@@ -144,15 +145,22 @@ app.post("/api/post/:data/:number",(req,res)=>{
 app.put("/api/put/:data/:id",(req,res) =>{
     let _data = 0;
     _data = req.params.data;
+    if(Datas_Number[req.params.id] = 6){
+        Datas_Number[req.params.id] = 1
+    }
     if(_data >= 500){
         _data = 500;
     }
     const post = {
-        id: Datas[req.params.number - 1].length + 1,
+        id: Datas_Number[req.params.id],
         data: _data
     };
-
-    Datas[req.params.number - 1].push(post);
+    let id = Datas[req.params.id].find((c) => c.id === parseInt(Datas_Number[req.params.id]));
+    id.data = _data;
+    Datas[Datas_Number[req.params.id]].put(post);
+    Datas_Number[req.params.id]++;
+    
+    
     
     for(let k = 1;k <= 5;k++){
         avg += parseFloat(Datas[req.params.number - 1].find((c) => c.id === k));
