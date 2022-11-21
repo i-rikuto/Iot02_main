@@ -141,11 +141,37 @@ app.post("/api/post/:data/:number",(req,res)=>{
 });
 
 //データの更新(put)
-app.put("/api/put/:id/:lock",(req,res) =>{
-    const id = lock_data.find((c) => c.id === parseInt(req.params.id));
-    id.lock = req.params.lock;
-    console.log("put!!");
-    res.send(id);
+app.put("/api/put/:data/:id",(req,res) =>{
+    let _data = 0;
+    _data = req.params.data;
+    if(_data >= 500){
+        _data = 500;
+    }
+    const post = {
+        id: Datas[req.params.number - 1].length + 1,
+        data: _data
+    };
+
+    Datas[req.params.number - 1].push(post);
+    
+    for(let k = 1;k <= 5;k++){
+        avg += parseFloat(Datas[req.params.number - 1].find((c) => c.id === k));
+    }
+    //k = 1
+    avg /= 5;
+    console.log(req.params.number + "の移動平均は" + avg);
+    if(avg > 80){
+        lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "yes";
+    }else{
+        lock_data.find((c) => c.id === parseInt(req.params.number)).lock = "no";
+    }
+    avg = 0.0;
+    console.log("push!");
+    res.send(Datas);
+    // const id = lock_data.find((c) => c.id === parseInt(req.params.id));
+    // id.lock = req.params.lock;
+    // console.log("put!!");
+    // res.send(id);
 });
 
 //データ削除(delete)
