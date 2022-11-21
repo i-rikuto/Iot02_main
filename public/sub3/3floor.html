@@ -94,7 +94,7 @@ function Reroad_Api(){
     //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
         //console.log(Data_Json.find((c) => c.id === parseInt(i)).time)
-        document.getElementById('time_' + String(i)).textContent = String(Data_Json.find((c) => c.id === parseInt(i)).time) + '分経過';
+        document.getElementById('Time_' + String(i)).textContent = String(Data_Json.find((c) => c.id === parseInt(i)).time) + '分経過';
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
             Before[i - 1] = 0;
