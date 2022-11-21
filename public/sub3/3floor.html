@@ -93,7 +93,7 @@ function Reroad_Api(){
     //Data_Json = Data_Json['lock'];
     //console.log(Data_Json.lock);
     for(let i = 1;i <= 3;i++){
-        console.log(Data_Json.find((c) => c.id === parseInt(i)).time)
+        //console.log(Data_Json.find((c) => c.id === parseInt(i)).time)
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
             Before[i - 1] = 0;
