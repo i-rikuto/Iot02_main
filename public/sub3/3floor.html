@@ -56,7 +56,7 @@
             padding-top:7px" ></p>
         </dev>
     </main>
-    <input type="text" id="LINE">
+    <input type="text" id="LINE" width="50%" value="LINEトークンを入力してください">
     <!-- <p style="border: none;"><a href="../index.html" id="Mainpage">トップページへ</a></p>
     <p style="border: none;"><a href="../index.html" id="MC2page"></a></p>
     <p style="border: none;"><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
@@ -193,7 +193,7 @@ const config = {
 
 const main = async () => {
     if(aki !== 0){
-        LINE_TOKEN = getElementById("LINE").textContent;
+        LINE_TOKEN = document.getElementById("LINE");
     const res = await fetch(BASE_URL + PATH, config).catch;
     console.log(res.status);
     }
