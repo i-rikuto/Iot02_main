@@ -211,23 +211,24 @@ const BASE_URL = 'https://notify-api.line.me';
 const PATH = '/api/notify';
 let LINE_TOKEN = ``; //先ほど発行したトークン
 
-const config = {
+let config = {
   baseURL: BASE_URL,
   url: PATH,
   method: 'post',
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
-    'Authorization': `Bearer ${rNihX9zCZm0UT3gR9iA8kCc3N07aaVtlQCZhjerCSUp}`
+    'Authorization': `Bearer ${document.getElementById("LINE").value}`
   },
   data: qs.stringify({
     message: `line通知`,
   })
 };
 
-(async function(){
+const main = async () => {
+  console.log("A");
   const response = await axios.request(config);
   console.log(response)
-})();
+}
 
 setInterval("main()",5000);
   </script>
