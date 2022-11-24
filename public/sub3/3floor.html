@@ -193,7 +193,7 @@ const config = {
 
 const main = async () => {
     if(aki !== 0){
-    const res = await fetch(BASE_URL + PATH, config);
+    const res = await fetch(BASE_URL + PATH, config).catch;
     console.log(res.status);
     }
 }
