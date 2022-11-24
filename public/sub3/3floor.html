@@ -172,36 +172,62 @@ setInterval("Reroad_Api()", 1000);
 	shadowColor: "#008000", 
   });</script>
   <script>
-    const BASE_URL = 'https://notify-api.line.me';
-const PATH =  '/api/notify';
-let LINE_TOKEN = `トークン`;
+//     const BASE_URL = 'https://notify-api.line.me';
+// const PATH =  '/api/notify';
+// let LINE_TOKEN = `トークン`;
 
 
-const params = new URLSearchParams({
-    message: '空きが出来ました。',
-});
+// const params = new URLSearchParams({
+//     message: '空きが出来ました。',
+// });
 
-let config = {
-    baseURL: BASE_URL,
-    url: PATH,
-    method: 'post',
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': `Bearer ${LINE_TOKEN}`
-    },
-    body: params.toString()
+// let config = {
+//     baseURL: BASE_URL,
+//     url: PATH,
+//     method: 'post',
+//     headers: {
+//         'Content-Type': 'application/x-www-form-urlencoded',
+//         'Authorization': `Bearer ${LINE_TOKEN}`
+//     },
+//     body: params.toString()
+// };
+
+
+// let main = async () => {
+//     if(aki > 0){
+//       LINE_TOKEN = document.getElementById("LINE").value;
+//       console.log(LINE_TOKEN);
+//     let res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
+//     aki = 0;
+//     //console.log(res.status);
+//     }
+// }
+
+'use strcit';
+
+const axios = require('axios');
+const qs = require('querystring');
+const BASE_URL = 'https://notify-api.line.me';
+const PATH = '/api/notify';
+let LINE_TOKEN = ``; //先ほど発行したトークン
+
+const config = {
+  baseURL: BASE_URL,
+  url: PATH,
+  method: 'post',
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Authorization': `Bearer ${rNihX9zCZm0UT3gR9iA8kCc3N07aaVtlQCZhjerCSUp}`
+  },
+  data: qs.stringify({
+    message: `line通知`,
+  })
 };
 
-
-let main = async () => {
-    if(aki > 0){
-      LINE_TOKEN = document.getElementById("LINE").value;
-      console.log(LINE_TOKEN);
-    let res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
-    aki = 0;
-    //console.log(res.status);
-    }
-}
+(async function(){
+  const response = await axios.request(config);
+  console.log(response)
+})();
 
 setInterval("main()",5000);
   </script>
