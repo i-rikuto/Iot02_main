@@ -185,7 +185,7 @@ const config = {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': `Bearer ${LINE_TOKEN.valueOf}`
+        'Authorization': `Bearer ${LINE_TOKEN.value}`
     },
     body: params.toString()
 };
