@@ -174,7 +174,7 @@ setInterval("Reroad_Api()", 1000);
   <script>
     const BASE_URL = 'https://notify-api.line.me';
 const PATH =  '/api/notify';
-let LINE_TOKEN = `トークン`;
+//let LINE_TOKEN = `トークン`;
 
 
 const params = new URLSearchParams({
@@ -193,7 +193,7 @@ const config = {
 
 const main = async () => {
     if(aki !== 0){
-        LINE_TOKEN = document.getElementById("LINE");
+    let  LINE_TOKEN = document.getElementById("LINE");
     const res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
     //console.log(res.status);
     }
