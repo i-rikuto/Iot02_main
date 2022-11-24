@@ -171,7 +171,7 @@ setInterval("Reroad_Api()", 1000);
 	compose: "lighter", 
 	shadowColor: "#008000", 
   });</script>
-  <script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
 //     const BASE_URL = 'https://notify-api.line.me';
 // const PATH =  '/api/notify';
 // let LINE_TOKEN = `トークン`;
@@ -204,12 +204,13 @@ setInterval("Reroad_Api()", 1000);
 // }
 
 function postContent() {
-  var content = "★★★ここに投稿内容を入力してください。★★★";
+  let content = "★★★ここに投稿内容を入力してください。★★★";
   sendPostContent(content);
 }
 
 function sendPostContent(content) {
-  let token = [document.getElementById("LINE").value];
+  let token = String(document.getElementById("LINE").value);
+  console.log(token);
   let options = {
     "method": "post",
     "payload" : {"message": content },
@@ -217,7 +218,21 @@ function sendPostContent(content) {
   };
   UrlFetchApp.fetch("https://notify-api.line.me/api/notify", options);
 }
-setInterval("postContent()",5000);
+
+//let send_data = new XMLHttpRequest();
+let lineNotifyApi = 'https://notify-api.line.me/api/notify'
+let LINE_TOKEN = 'rNihX9zCZm0UT3gR9iA8kCc3N07aaVtlQCZhjerCSUp';
+let headers = {'Authorization': 'Bearer ${LINE_TOKEN}'}
+let data = {'message': 'Hi'}
+//send_data.open('POST', 'http://send.com');
+//send_data.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+//send_data.send(lineNotifyApi, headers = headers, params = data);
+$.post(lineNotifyApi, headers = headers, params = data);
+
+
+
+//requests.post(lineNotifyApi, headers = headers, params = data, files = files)
+//setInterval("postContent()",5000);
   </script>
 </body>
 </html>
