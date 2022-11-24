@@ -95,10 +95,10 @@
     let plus = [3,3,3];
     let Interval_no = [];
     let Interval_yes = [];
-    let aki = 3;
+    let aki = 0;
     let Interval_Count;
 function Reroad_Api(){
-    aki = 0;
+    //aki = 0;
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -196,6 +196,7 @@ const main = async () => {
       LINE_TOKEN = document.getElementById("LINE").value;
       console.log(LINE_TOKEN);
     const res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
+    aki = 0;
     //console.log(res.status);
     }
 }
