@@ -56,6 +56,7 @@
             padding-top:7px" ></p>
         </dev>
     </main>
+    <input type="text" id="LINE">
     <!-- <p style="border: none;"><a href="../index.html" id="Mainpage">トップページへ</a></p>
     <p style="border: none;"><a href="../index.html" id="MC2page"></a></p>
     <p style="border: none;"><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
@@ -94,6 +95,7 @@
     let plus = [3,3,3];
     let Interval_no = [];
     let Interval_yes = [];
+    let aki = 3;
     let Interval_Count;
 function Reroad_Api(){
     
@@ -110,6 +112,7 @@ function Reroad_Api(){
         document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
         if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
             Before[i - 1] = 0;
+            aki--;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.05;
             Interval_no[i - 1] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
@@ -124,6 +127,7 @@ function Reroad_Api(){
             },10);
         }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1){
             Before[i - 1] = 1;
+            aki++;
             Count_Yes[i - 1] = 1;
             plus[i - 1] = -0.05;
             Interval_yes[i - 1] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
@@ -167,5 +171,34 @@ setInterval("Reroad_Api()", 1000);
 	compose: "lighter", 
 	shadowColor: "#008000", 
   });</script>
+  <script>
+    const BASE_URL = 'https://notify-api.line.me';
+const PATH =  '/api/notify';
+let LINE_TOKEN = `トークン`;
+LINE_TOKEN = getElementById("LINE").textContent;
+
+const params = new URLSearchParams({
+    message: '空きが出来ました。',
+});
+
+const config = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': `Bearer ${LINE_TOKEN}`
+    },
+    body: params.toString()
+};
+
+
+const main = async () => {
+    if(aki !== 0){
+    const res = await fetch(BASE_URL + PATH, config);
+    console.log(res.status);
+    }
+}
+
+setInterval(main(),1000);
+  </script>
 </body>
 </html>
