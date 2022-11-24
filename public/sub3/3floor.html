@@ -193,11 +193,11 @@ let config = {
 };
 
 
-const main = async () => {
+let main = async () => {
     if(aki > 0){
       LINE_TOKEN = document.getElementById("LINE").value;
       console.log(LINE_TOKEN);
-    const res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
+    let res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
     aki = 0;
     //console.log(res.status);
     }
