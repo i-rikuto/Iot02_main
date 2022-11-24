@@ -175,7 +175,7 @@ setInterval("Reroad_Api()", 1000);
     const BASE_URL = 'https://notify-api.line.me';
 const PATH =  '/api/notify';
 let LINE_TOKEN = `トークン`;
-LINE_TOKEN = getElementById("LINE").textContent;
+
 
 const params = new URLSearchParams({
     message: '空きが出来ました。',
@@ -193,6 +193,7 @@ const config = {
 
 const main = async () => {
     if(aki !== 0){
+        LINE_TOKEN = getElementById("LINE").textContent;
     const res = await fetch(BASE_URL + PATH, config).catch;
     console.log(res.status);
     }
