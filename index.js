@@ -172,8 +172,10 @@ app.put("/api/put/:data/:id",(req,res) =>{
     console.log(req.params.id + "の移動平均は" + avg);
     if(avg > 80){
         lock_data.find((c) => c.id === parseInt(req.params.id)).lock = "yes";
+        LINE();
     }else{
         lock_data.find((c) => c.id === parseInt(req.params.id)).lock = "no";
+        
     }
     avg = 0.0;
     console.log("push!");
@@ -207,3 +209,62 @@ setInterval(() => {for(let l = 1;l <= 3;l++){
         lock_data.find((c) => c.id === l).time = 0;
     }
 }},1000);
+
+const axios = require('axios');
+const qs = require('querystring');
+const { fromByteArray } = require("ipaddr.js");
+const internal = require("stream");
+const BASE_URL = 'https://notify-api.line.me';
+const PATH = '/api/notify';
+
+function LINE(){
+
+if(Token.length !== 0){
+    Notyfy();
+    }
+}
+//}
+
+let Notyfy = async() =>{
+    'use strcit';
+    let now = new Date();
+      let Year = now.getFullYear();
+      let Month = now.getMonth()+1;
+      let Date = now.getDate();
+      let Hour = now.getHours();
+      let Min = now.getMinutes();
+      let Sec = now.getSeconds();
+
+      target.innerHTML = Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec;
+    
+    let LINE_TOKEN = Token[0]; //先ほど発行したトークン
+    Token.shift();
+    let config = {
+    baseURL: BASE_URL,
+    url: PATH,
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': `Bearer ${LINE_TOKEN}`
+    },
+    data: qs.stringify({
+        message: `空きができました\n` +Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec,
+    })
+    };
+    const response = await axios.request(config).catch(() => console.log("Error"));
+    console.log(LINE_TOKEN);
+    console.log(response);
+    if(Token.length >= 1){
+        LINE();
+    }else{
+        Token.length = 0;
+    }
+}
+
+let Token = [];
+
+app.post("/api/pos/token/:tokens",(req,res)=>{
+    Token.push(req.params.tokens);
+    console.log(Token.length);
+    console.log(Token);
+});

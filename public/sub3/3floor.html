@@ -56,7 +56,14 @@
             padding-top:7px" ></p>
         </dev>
     </main>
-    <input type="text" id="LINE" width="50vw" value="LINEトークンを入力してください">
+    <!-- <input type="text" id="LINE" width="50vw" value="LINEトークンを入力してください">
+    <input type="button" name="" id="" value="Send" onclick="Send()"> -->
+    <!-- <form action="https://www.izumain.net/api/post/token" method="POST" id="Form"> -->
+
+    <input name="test_text" id="LINE" type="text" value="LINEトークンを入力してください">
+    <input type="button" value="送信"  id="post">
+  
+    <!-- </form> -->
     <!-- <p style="border: none;"><a href="../index.html" id="Mainpage">トップページへ</a></p>
     <p style="border: none;"><a href="../index.html" id="MC2page"></a></p>
     <p style="border: none;"><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
@@ -64,6 +71,7 @@
     <div class="push"></div>
     <footer >
         <small>&copy; 2022 r-izume </small>
+        <dev id = "Day"></dev>
     </footer>
     <script>
         console.log(location.href);
@@ -171,68 +179,56 @@ setInterval("Reroad_Api()", 1000);
 	compose: "lighter", 
 	shadowColor: "#008000", 
   });</script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
-//     const BASE_URL = 'https://notify-api.line.me';
-// const PATH =  '/api/notify';
-// let LINE_TOKEN = `トークン`;
+  <!-- <script>
+    let form = document.getElementById("Form");
+    const Send = () =>{
+        let xml = new XMLHttpRequest();
+        let token = String(document.getElementById("LINE").value);
+        xml.open('POST', 'http://localhost:8888/api/post/token/' + token);
+        xml.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+        xml.send(string);
+        // let token = String(document.getElementById("LINE").value);
+        // form.action = 'http://localhost:8888/api/post/token/' + token;
+        // form.appendChild(request);
+        // form.submit();
+        // document.getElementById("LINE").value = "送信完了";
+        // console.log(token);
+        //$.post(lineNotifyApi, headers = headers, params = data);
+    } -->
 
+//document.getElementById("Send").onclick
+  </script>
+  <script src="//code.jquery.com/jquery-1.11.3.js"></script>
+  <script>
+  $(function(){
+    
+    
+      $('#post').on('click', function(){
+        let token = String(document.getElementById("LINE").value);
+        console.log(token);
+          var hoge = "this is text";
+          $.ajax({
+              url: 'https://www.izumain.net/api/pos/token/' + token,
+              method: 'post',
+          })
+          document.getElementById("LINE").value = "送信完了";
+      })
+      
+  })
+  </script>
+  <script>
+    setInterval(() => {
+        let now = new Date();
+      let Year = now.getFullYear();
+      let Month = now.getMonth()+1;
+      let Date = now.getDate();
+      let Hour = now.getHours();
+      let Min = now.getMinutes();
+      let Sec = now.getSeconds();
 
-// const params = new URLSearchParams({
-//     message: '空きが出来ました。',
-// });
-
-// let config = {
-//     baseURL: BASE_URL,
-//     url: PATH,
-//     method: 'post',
-//     headers: {
-//         'Content-Type': 'application/x-www-form-urlencoded',
-//         'Authorization': `Bearer ${LINE_TOKEN}`
-//     },
-//     body: params.toString()
-// };
-
-
-// let main = async () => {
-//     if(aki > 0){
-//       LINE_TOKEN = document.getElementById("LINE").value;
-//       console.log(LINE_TOKEN);
-//     let res = await fetch(BASE_URL + PATH, config).catch(() => console.log("Error"));
-//     aki = 0;
-//     //console.log(res.status);
-//     }
-// }
-
-function postContent() {
-  let content = "★★★ここに投稿内容を入力してください。★★★";
-  sendPostContent(content);
-}
-
-function sendPostContent(content) {
-  let token = String(document.getElementById("LINE").value);
-  console.log(token);
-  let options = {
-    "method": "post",
-    "payload" : {"message": content },
-    "headers": {"Authorization": "Bearer " + token}    
-  };
-  UrlFetchApp.fetch("https://notify-api.line.me/api/notify", options);
-}
-
-//let send_data = new XMLHttpRequest();
-let lineNotifyApi = 'https://notify-api.line.me/api/notify'
-let LINE_TOKEN = 'rNihX9zCZm0UT3gR9iA8kCc3N07aaVtlQCZhjerCSUp';
-let headers = {'Authorization': 'Bearer ${LINE_TOKEN}'}
-let data = {'message': 'Hi'}
-//send_data.open('POST', 'http://send.com');
-//send_data.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
-//send_data.send(lineNotifyApi, headers = headers, params = data);
-$.post(lineNotifyApi, headers = headers, params = data);
-
-
-
-//requests.post(lineNotifyApi, headers = headers, params = data, files = files)
-//setInterval("postContent()",5000);
+      document.getElementById("Day") = Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec;
+    },1000
+    )
   </script>
 </body>
 </html>
