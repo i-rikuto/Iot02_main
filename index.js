@@ -227,15 +227,15 @@ if(Token.length !== 0){
 
 let Notyfy = async() =>{
     'use strcit';
-    let now = new Date();
-      let Year = now.getFullYear();
-      let Month = now.getMonth()+1;
-      let Date = now.getDate();
-      let Hour = now.getHours();
-      let Min = now.getMinutes();
-      let Sec = now.getSeconds();
+    // let now = new Date();
+    //   let Year = now.getFullYear();
+    //   let Month = now.getMonth()+1;
+    //   let Date = now.getDate();
+    //   let Hour = now.getHours();
+    //   let Min = now.getMinutes();
+    //   let Sec = now.getSeconds();
 
-      target.innerHTML = Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec;
+    //   target.innerHTML = Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec;
     
     let LINE_TOKEN = Token[0]; //先ほど発行したトークン
     Token.shift();
@@ -248,7 +248,7 @@ let Notyfy = async() =>{
         'Authorization': `Bearer ${LINE_TOKEN}`
     },
     data: qs.stringify({
-        message: `空きができました\n` +Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec,
+        message: `空きができました\nhttps://www.izumain.net`
     })
     };
     const response = await axios.request(config).catch(() => console.log("Error"));
