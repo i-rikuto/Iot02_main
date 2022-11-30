@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="../temp.css">
     <title>成果物ページ</title>
 </head>
+
 <body>
     <div class="bg"></div>
     <div class="bg bg2"></div>
@@ -20,40 +22,40 @@
         <img src="../icon.png" alt="アイコン" height="40px" width="40px">
         <div id="Top"><a href="https://www.dentsu.ed.jp/">実習2班</a></div>
         <input type="checkbox" id="toggle" /><label style="background-image: url(../menu_button.png);"></label>
-    <nav>
-        <ul>
-            <li><a href="../index.html">ホーム</a></li>
-            <li><a href="../notice/notice.html">お知らせ</a></li>
-            <li><a href="3floor.html" >成果物</a></li>
-            <li class="non"><a href="#">Q&A</a></li>
-            <li><a href="../contact/contact.html">お問い合わせ</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="../notice/notice.html">お知らせ</a></li>
+                <li><a href="3floor.html">成果物</a></li>
+                <li class="non"><a href="#">Q&A</a></li>
+                <li><a href="../contact/contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
     </header>
     <main style="margin-top: 30px;">
         <dev class="LockImage">
             <p>手前</p>
-            <img id="main_1" src="image/error_Lock.png"  alt="鍵の画像">
-            <p id="Time_1"style="background-color: orange;
+            <img id="main_1" src="image/error_Lock.png" alt="鍵の画像">
+            <p id="Time_1" style="background-color: orange;
             margin-top: 0px;
             border:none;
-            padding-top:7px" ></p>
+            padding-top:7px"></p>
         </dev>
         <dev class="LockImage">
             <p>中間</p>
-            <img id="main_2" src="image/error_Lock.png"  alt="鍵の画像">
-            <p id="Time_2"style="background-color: orange;
+            <img id="main_2" src="image/error_Lock.png" alt="鍵の画像">
+            <p id="Time_2" style="background-color: orange;
             margin-top: 0px;
             border:none;
-            padding-top:7px" ></p>
+            padding-top:7px"></p>
         </dev>
         <dev class="LockImage">
             <p>奥</p>
-            <img id="main_3" src="image/error_Lock.png"  alt="鍵の画像">
-            <p id="Time_3"style="background-color: orange;
+            <img id="main_3" src="image/error_Lock.png" alt="鍵の画像">
+            <p id="Time_3" style="background-color: orange;
             margin-top: 0px;
             border:none;
-            padding-top:7px" ></p>
+            padding-top:7px"></p>
         </dev>
     </main>
     <!-- <input type="text" id="LINE" width="50vw" value="LINEトークンを入力してください">
@@ -61,125 +63,132 @@
     <!-- <form action="https://www.izumain.net/api/post/token" method="POST" id="Form"> -->
 
     <input name="test_text" id="LINE" type="text" value="LINEトークンを入力してください">
-    <input type="button" value="送信"  id="post">
-  
+    <input type="button" value="送信" id="post">
+
     <!-- </form> -->
     <!-- <p style="border: none;"><a href="../index.html" id="Mainpage">トップページへ</a></p>
     <p style="border: none;"><a href="../index.html" id="MC2page"></a></p>
     <p style="border: none;"><a href="https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html">つながらないときは</a></p>
     <div><p id="now_where" style="border: none;"></p></div> -->
     <div class="push"></div>
-    <footer >
+    <footer>
         <small>&copy; 2022 r-izume </small>
-        <dev id = "Day"></dev>
+
     </footer>
     <script>
         console.log(location.href);
         let url = "";
-        window.onload =() =>{
-        let _url = location.href
-        if(_url == 'https://www.izumain.net/sub3/3floor.html'){
-            console.log("OK");
-            url = 'https://www.izumain.net/api/locks_data';
-            //document.getElementById("now_where").textContent = "現在正式なサイトです。";
-        }else if(_url == 'https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html'){
-            console.log("None")
-            url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
-            // document.getElementById("now_where").textContent = "現在対MC2Wi-Fiのサイトです。";
-            // document.getElementById("MC2page").textContent = "対MC2Wi-Fiのトップページへ。";
-            // document.getElementById("Mainpage").textContent = "正式なトップページへ。";
-            // document.getElementById("Mainpage").href = "https://www.izumain.net";
-        }else{
-            //document.getElementById("now_where").textContent = "現在未知のサイトです。";
+        window.onload = () => {
+            let _url = location.href
+            if (_url == 'https://www.izumain.net/sub3/3floor.html') {
+                console.log("OK");
+                url = 'https://www.izumain.net/api/locks_data';
+                //document.getElementById("now_where").textContent = "現在正式なサイトです。";
+            } else if (_url == 'https://oecu-iot02-lockcheck.herokuapp.com/sub3/3floor.html') {
+                console.log("None")
+                url = "https://oecu-iot02-lockcheck.herokuapp.com/api/locks_data";
+                // document.getElementById("now_where").textContent = "現在対MC2Wi-Fiのサイトです。";
+                // document.getElementById("MC2page").textContent = "対MC2Wi-Fiのトップページへ。";
+                // document.getElementById("Mainpage").textContent = "正式なトップページへ。";
+                // document.getElementById("Mainpage").href = "https://www.izumain.net";
+            } else {
+                //document.getElementById("now_where").textContent = "現在未知のサイトです。";
+            }
         }
-    }
-    
-    const Lock_image = ["/image/Lock.png"];
-    const NO_Lock_image = ["/image/no_Lock.png"];
-    //const NO_Lock_image = ["/image/IMG_20221025_113948.jpg"];
-    const Error_image = ["/image/error_Lock.png"];
-    let Count_Yes = [0,0,0];
-    let Before = [3,3,3];
-    let plus = [3,3,3];
-    let Interval_no = [];
-    let Interval_yes = [];
-    let aki = 0;
-    let Interval_Count;
-function Reroad_Api(){
-    //aki = 0;
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-    //console.log(data);
-    let Data_Json = data;
-    //Data_Json = Data_Json['lock'];
-    //console.log(Data_Json.lock);
-    for(let i = 1;i <= 3;i++){
-        //console.log(Data_Json.find((c) => c.id === parseInt(i)).time)
-        document.getElementById('Time_' + String(i)).textContent = String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time/60)) + '分' + String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time%60) + '秒経過');
-        document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
-        if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0){
-            Before[i - 1] = 0;
-            
-            Count_Yes[i - 1] = 1;
-            plus[i - 1] = -0.05;
-            Interval_no[i - 1] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
-                if(Count_Yes[i - 1] <= -0.1){
-                    plus[i - 1] = 0.05;
-                    document.getElementById('main_' + String(i)).src = Lock_image;
-                    console.log(i);
-                }
-                document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
-                if(Count_Yes[i - 1] > 1){clearInterval(Interval_no[i - 1]);
-                console.log("stop");}
-            },10);
-        }else if((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1){
-            Before[i - 1] = 1;
-            aki++;
-            Count_Yes[i - 1] = 1;
-            plus[i - 1] = -0.05;
-            Interval_yes[i - 1] = setInterval(() => {Count_Yes[i - 1] += plus[i - 1];
-                if(Count_Yes[i - 1] <= -0.1){
-                    plus[i - 1] = 0.05;
-                    document.getElementById('main_' + String(i)).src = NO_Lock_image;
-                    console.log(i);
-                }
-                document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
-                if(Count_Yes[i - 1] > 1){clearInterval(Interval_yes[i - 1]);
-                console.log("stop");}
-            },10);
-        }else{
-            console.log("else");
+
+        const Lock_image = ["/image/Lock.png"];
+        const NO_Lock_image = ["/image/no_Lock.png"];
+        //const NO_Lock_image = ["/image/IMG_20221025_113948.jpg"];
+        const Error_image = ["/image/error_Lock.png"];
+        let Count_Yes = [0, 0, 0];
+        let Before = [3, 3, 3];
+        let plus = [3, 3, 3];
+        let Interval_no = [];
+        let Interval_yes = [];
+        let aki = 0;
+        let Interval_Count;
+        function Reroad_Api() {
+            //aki = 0;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data);
+                    let Data_Json = data;
+                    //Data_Json = Data_Json['lock'];
+                    //console.log(Data_Json.lock);
+                    for (let i = 1; i <= 3; i++) {
+                        //console.log(Data_Json.find((c) => c.id === parseInt(i)).time)
+                        document.getElementById('Time_' + String(i)).textContent = String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time / 60)) + '分' + String(parseInt(Data_Json.find((c) => c.id === parseInt(i)).time % 60) + '秒経過');
+                        document.getElementById('main_' + String(i)).textContent = (Data_Json.find((c) => c.id === parseInt(i)).lock);
+                        if ((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'no' && Before[i - 1] !== 0) {
+                            Before[i - 1] = 0;
+
+                            Count_Yes[i - 1] = 1;
+                            plus[i - 1] = -0.05;
+                            Interval_no[i - 1] = setInterval(() => {
+                                Count_Yes[i - 1] += plus[i - 1];
+                                if (Count_Yes[i - 1] <= -0.1) {
+                                    plus[i - 1] = 0.05;
+                                    document.getElementById('main_' + String(i)).src = Lock_image;
+                                    console.log(i);
+                                }
+                                document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
+                                if (Count_Yes[i - 1] > 1) {
+                                    clearInterval(Interval_no[i - 1]);
+                                    console.log("stop");
+                                }
+                            }, 10);
+                        } else if ((Data_Json.find((c) => c.id === parseInt(i)).lock) === 'yes' && Before[i - 1] !== 1) {
+                            Before[i - 1] = 1;
+                            aki++;
+                            Count_Yes[i - 1] = 1;
+                            plus[i - 1] = -0.05;
+                            Interval_yes[i - 1] = setInterval(() => {
+                                Count_Yes[i - 1] += plus[i - 1];
+                                if (Count_Yes[i - 1] <= -0.1) {
+                                    plus[i - 1] = 0.05;
+                                    document.getElementById('main_' + String(i)).src = NO_Lock_image;
+                                    console.log(i);
+                                }
+                                document.getElementById('main_' + String(i)).style.opacity = Count_Yes[i - 1]
+                                if (Count_Yes[i - 1] > 1) {
+                                    clearInterval(Interval_yes[i - 1]);
+                                    console.log("stop");
+                                }
+                            }, 10);
+                        } else {
+                            console.log("else");
+                        }
+                    }
+                })//.catch(Error())
+
         }
-    }
-    })//.catch(Error())
-    
-}
 
-function Error(){
-    //don't touch
-    console.log("Error");
-    for(let k = 1;k <= 3;k++){
-            document.getElementById('main_' + String(k)).src = Error_image;
+        function Error() {
+            //don't touch
+            console.log("Error");
+            for (let k = 1; k <= 3; k++) {
+                document.getElementById('main_' + String(k)).src = Error_image;
+            }
         }
-}
 
 
-setInterval("Reroad_Api()", 1000);
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
-  <script>bubbly({animate: true, 
-	blur: 5, 
-	bubbleFunc: () => `hsla(${Math.random() * (120 - 90) + 90}, 80%, 50%, 1)`, 
-	//bubbleFunc: "#4c004c", 
-	bubbles: 30, 
-	canvas: document.querySelector("#background"), 
-	colorStart: "#f0f8ff", 
-	colorStop: "#f0f8ff",
-	compose: "lighter", 
-	shadowColor: "#008000", 
-  });</script>
-  <!-- <script>
+        setInterval("Reroad_Api()", 1000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <script>bubbly({
+            animate: true,
+            blur: 5,
+            bubbleFunc: () => `hsla(${Math.random() * (120 - 90) + 90}, 80%, 50%, 1)`,
+            //bubbleFunc: "#4c004c", 
+            bubbles: 30,
+            canvas: document.querySelector("#background"),
+            colorStart: "#f0f8ff",
+            colorStop: "#f0f8ff",
+            compose: "lighter",
+            shadowColor: "#008000",
+        });</script>
+    <!-- <script>
     let form = document.getElementById("Form");
     const Send = () =>{
         let xml = new XMLHttpRequest();
@@ -197,26 +206,26 @@ setInterval("Reroad_Api()", 1000);
     } -->
 
 
-  </script>
-  <script src="//code.jquery.com/jquery-1.11.3.js"></script>
-  <script>
-  $(function(){
-    
-    
-      $('#post').on('click', function(){
-        let token = String(document.getElementById("LINE").value);
-        console.log(token);
-          var hoge = "this is text";
-          $.ajax({
-              url: 'https://www.izumain.net/api/pos/token/' + token,
-              method: 'post',
-          })
-          document.getElementById("LINE").value = "送信完了";
-      })
-      
-  })
-  </script>
-  <!-- <script>
+    </script>
+    <script src="//code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+        $(function () {
+
+
+            $('#post').on('click', function () {
+                let token = String(document.getElementById("LINE").value);
+                console.log(token);
+                var hoge = "this is text";
+                $.ajax({
+                    url: 'https://www.izumain.net/api/pos/token/' + token,
+                    method: 'post',
+                })
+                document.getElementById("LINE").value = "送信完了";
+            })
+
+        })
+    </script>
+    <!-- <script>
     setInterval(() => {
       let now = new Date();
       let Year = now.getFullYear();
@@ -231,4 +240,5 @@ setInterval("Reroad_Api()", 1000);
     )
   </script> -->
 </body>
+
 </html>

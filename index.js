@@ -269,4 +269,5 @@ app.post("/api/pos/token/:tokens", (req, res) => {
     Token.push(req.params.tokens);
     console.log(Token.length);
     console.log(Token);
+    res.send("OK");
 });
