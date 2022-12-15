@@ -1,24 +1,50 @@
-.floor{
+input:invalid {
+    animation: shake .3s;
+}
+
+#post {
+    background-color: rgb(3, 194, 42);
+    color: white;
+    border: none;
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(4px);
+    }
+
+    50% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+}
+
+.floor {
     background-color: aqua;
     display: flex;
 }
-.F{
+
+.F {
     /* display: flex; */
     list-style: none;
 }
-.akijyoufou.F{
+
+.akijyoufou.F {
     display: flex;
 }
 
-main{  
+main {
     display: flex;
-    
+
     margin-left: auto;
     /* margin-top: 130px; */
 }
 
 
-.LockImage>p{
+.LockImage>p {
     font-size: 20px;
     margin-bottom: 10px;
     clear: both;
@@ -33,11 +59,11 @@ main{
 }
 
 
-body{
+body {
     background-color: rgb(255, 255, 255);
 }
 
-nav>ul>li{
+nav>ul>li {
     background-color: rgb(255, 225, 0);
     width: 200px;
     height: 60px;
@@ -47,18 +73,18 @@ nav>ul>li{
     font-family: serif;
     text-align: center;
     line-height: 60px;
-    transition: background-color 0.7s,border-bottom 0.2s;
+    transition: background-color 0.7s, border-bottom 0.2s;
     border-left: solid rgb(255, 242, 0);
     /* transition: width .5s; */
     /* transition: height 1s; */
 }
 
-ul>li>a{
+ul>li>a {
     padding-bottom: 5px;
     position: relative;
 }
 
-ul>li>a::before{
+ul>li>a::before {
     background: #ff701e;
     content: '';
     width: 100%;
@@ -76,78 +102,81 @@ ul>li>a:hover::before {
     transform-origin: left top;
     transform: scale(1, 1);
     /* border-bottom: solid; */
-    
+
     /* background: linear-gradient(#ff9900, #dec800); */
 }
 
-ul>li:hover{
-    background-color: #ffd000 ;
-    
+ul>li:hover {
+    background-color: #ffd000;
+
     /* width: 280px; */
     /* border: thick double greenyellow; */
     /* height: 130px; */
 }
 
-a{
-    text-decoration: none;   
+a {
+    text-decoration: none;
     color: rgb(109, 109, 109);
     border-radius: 10px;
 }
 
-ul{
+ul {
     /* width: 100%; */
     /* position: fixed; */
     display: flex;
     justify-content: space-evenly;
-    
+
 }
 
-h2{
+h2 {
     font-size: 60px;
     font-family: system-ui;
     margin-left: 30px;
-    
+
     /* margin-top: 10px; */
 }
 
-h1{
+h1 {
     padding-top: 20px;
 }
 
-#url>p{
+#url>p {
     margin-left: 30px;
     margin-top: 10px;
-    
+
 }
 
-p{
+p {
     margin-left: 30px;
     margin-top: 10px;
 }
 
-.non,.non>a:hover{
+.non,
+.non>a:hover {
     cursor: not-allowed;
 }
 
-header{
+header {
     /* background-color: rgb(127, 255, 155); */
     height: 60px;
     display: flex;
     width: 100%;
     background-color: rgb(237, 237, 237);
     /* padding-left: 30px; */
-    
+
 }
 
-header>img{
+header>img {
     padding: 10px 2px 0px 0px;
 }
 
-.LockImage{
+.LockImage {
     width: auto;
 }
 
-#main_1,#main_2,#main_3{
+#main_1,
+#main_2,
+#main_3 {
     border-radius: 100px;
     width: 30vw;
     height: 400px;
@@ -156,26 +185,27 @@ header>img{
 }
 
 /* iPad */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
 
-}
 /* スマホ */
 @media screen and (max-width: 480px) {
-    main{
+    main {
         /* width: 100%; */
         /* position: fixed; */
         display: inline;
-        
+
     }
 
-    #main_1,#main_2,#main_3{
+    #main_1,
+    #main_2,
+    #main_3 {
         border-radius: 130px;
         width: 80vw;
         height: auto;
         margin-left: 20px;
     }
 
-    .LockImage>p{
+    .LockImage>p {
         font-size: 20px;
         margin-bottom: 10px;
         clear: both;
@@ -189,11 +219,11 @@ header>img{
         padding-top: 5px;
     }
 
-    .LockImage{
+    .LockImage {
         padding-right: 40px;
     }
 
-/* footer{
+    /* footer{
         height: 100px;
         width: 100vw;
         background-color: #ffdc43da;
