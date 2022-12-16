@@ -1,14 +1,13 @@
-
-.push{
+.push {
     height: 100px;
     width: 100vw;
 }
 
-html{
+html {
     height: 100%;
 }
 
-footer{
+footer {
     height: 100px;
     width: 100vw;
     background-color: rgb(44, 188, 0);
@@ -17,7 +16,7 @@ footer{
     /* margin-bottom: -100px; */
 }
 
-small{
+small {
     /* position: absolute; */
     width: auto;
     height: auto;
@@ -27,7 +26,7 @@ small{
     font-family: "Gill Sans", sans-serif;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: auto;
@@ -36,20 +35,20 @@ body{
     min-height: 100%;
 }
 
-html{
+html {
     overflow-x: hidden;
 }
 
-nav{
+nav {
     margin: 0 0 0 auto;
     width: 80%;
 }
 
-header{
+header {
     width: 100%;
 }
 
-nav>ul>li{
+nav>ul>li {
     background-color: rgb(44, 188, 0);
     width: 100%;
     height: 60px;
@@ -59,14 +58,14 @@ nav>ul>li{
     font-family: serif;
     text-align: center;
     line-height: 60px;
-    transition: background-color 0.7s,border-bottom 0.2s;
+    transition: background-color 0.7s, border-bottom 0.2s;
     border-left: solid rgb(255, 255, 255);
     border-radius: 5px;
     /* transition: width .5s; */
     /* transition: height 1s; */
 }
 
-ul>li>a{
+ul>li>a {
     padding-bottom: 5px;
     position: relative;
     display: block;
@@ -74,7 +73,7 @@ ul>li>a{
     font-family: 'Verdana';
 }
 
-ul>li>a::before{
+ul>li>a::before {
     background: #ffaa00;
     content: '';
     width: 60%;
@@ -92,24 +91,24 @@ ul>li>a:hover::before {
     transform-origin: left top;
     transform: scale(1, 1);
     /* border-bottom: solid; */
-    
+
     /* background: linear-gradient(#ff9900, #dec800); */
 }
 
-ul>li:hover{
-    background-color: #048500 ;
-    
+ul>li:hover {
+    background-color: #048500;
+
     /* width: 280px; */
     /* border: thick double greenyellow; */
     /* height: 130px; */
 }
 
- a{
-    text-decoration: none;   
+a {
+    text-decoration: none;
     color: black;
-} 
+}
 
-ul{
+ul {
     /* width: 100%; */
     /* position: fixed; */
     display: flex;
@@ -117,7 +116,8 @@ ul{
     /* margin-left: 150px; */
 }
 
-h1,h2{
+h1,
+h2 {
     margin-top: 40px;
     font-size: 50px;
     font-family: system-ui;
@@ -126,7 +126,7 @@ h1,h2{
     height: 70px;
     font-weight: 200;
     border: 1px solid rgb(255, 255, 255);
-    border-left:8px solid rgb(44, 188, 0);
+    border-left: 8px solid rgb(44, 188, 0);
     background-color: rgb(255, 255, 255);
     padding-top: 10px;
     text-align: center;
@@ -135,22 +135,22 @@ h1,h2{
     /* margin-top: 10px; */
 }
 
-#Top{
+#Top {
     padding-top: 20px;
     padding-left: 5px;
-    
+
     white-space: nowrap;
-    
+
 }
 
-#Top>a{
+#Top>a {
     font-size: 20px;
     font-weight: bold;
     font-family: system-ui;
 }
 
 
-p{
+p {
     font-size: 20px;
     margin-left: 30px;
     margin-top: 10px;
@@ -158,11 +158,12 @@ p{
     border: solid 3px rgb(44, 188, 0);
 }
 
-.non,.non>a:hover{
+.non,
+.non>a:hover {
     cursor: not-allowed;
 }
 
-header{
+header {
     /* background-color: rgb(127, 255, 155); */
     height: 60px;
     display: flex;
@@ -174,12 +175,12 @@ header{
 
 
 
-header>img{
+header>img {
     padding: 10px 2px 0px 0px;
     margin-left: 1%;
 }
 
-#toggle{
+#toggle {
     visibility: hidden;
 }
 
@@ -203,25 +204,26 @@ header>img{
   .bg3 {
     animation-duration:5s;
   } */
-  
-  
-  
-  
-  @keyframes slide {
-    0% {
-      transform:translateX(-25%);
-    }
-    100% {
-      transform:translateX(25%);
-    }
-  }
-/* iPad */
-@media screen and (max-width: 768px) {
 
- }
- /* スマホ */
- @media screen and (max-width: 480px) {
-    #toggle{
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+/* iPad */
+@media screen and (max-width: 768px) {}
+
+/* スマホ */
+@media screen and (max-width: 480px) {
+    #toggle {
         visibility: visible;
         height: 50px;
         width: 50px;
@@ -232,67 +234,68 @@ header>img{
         background-color: #048500;
     }
 
-    nav>ul>li{
+    nav>ul>li {
         /* background-color: rgb(255, 225, 0); */
         width: 200px;
         height: 60px;
-        
+
         font-size: 20px;
         list-style: none;
         /* border:  #ffcc00; */
         font-family: serif;
         text-align: center;
         line-height: 60px;
-        transition: background-color 0.7s,border-bottom 0.2s;
+        transition: background-color 0.7s, border-bottom 0.2s;
         /* border-left: solid rgb(255, 242, 0); */
         /* transition: width .5s; */
         /* transition: height 1s; */
     }
 
-    ul>li>a{
+    ul>li>a {
         padding-bottom: 5px;
         position: center;
         display: block;
     }
 
-    ul{
+    ul {
         /* width: 100%; */
         /* position: fixed; */
         display: inline;
         justify-content: none;
-        
+
     }
-    nav{
+
+    nav {
         width: auto;
         height: auto;
         position: absolute;
         visibility: hidden;
         margin-top: 60px;
         right: 0;
-        
+
     }
 
     /* #toggle input label::after{
         background-image: url("menu_button.png");
     } */
-    
+
     /* ._checkbox>input {
         display: none; デフォルトのチェックボックスを非表示 
       } */
 
-    label{
+    label {
         background-image: url("menu_button.png");
     }
 
-    #toggle:checked ~ nav{
+    #toggle:checked~nav {
         visibility: visible;
     }
 
-    p{
+    p {
         font-size: 16px;
     }
 
-    body{
+    body {
         margin: 0;
         padding: 0;
         height: auto;
@@ -301,7 +304,8 @@ header>img{
         min-height: 100%;
     }
 
-    h1,h2{
+    h1,
+    h2 {
         margin-top: 40px;
         font-size: 40px;
         font-family: system-ui;
@@ -309,15 +313,16 @@ header>img{
         width: 80%;
         height: 70px;
         font-weight: bold;
-        border-left:3px solid rgb(44, 188, 0);
+        border-left: 3px solid rgb(44, 188, 0);
         background-color: rgb(255, 255, 255);
         padding-top: 10px;
         text-align: center;
         border-radius: 10px 0px 10px 0px;
         /* margin-top: 10px; */
-        
+
     }
-    footer{
+
+    footer {
         height: 100px;
         width: 100vw;
         background-color: rgb(44, 188, 0);
@@ -331,4 +336,4 @@ header>img{
     /* .check_box{
         background-image: url("menu_button.png");
     } */
- }
+}
